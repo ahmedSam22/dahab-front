@@ -1,3 +1,4 @@
+import { LoginComponent } from './components/auth/login/login.component';
 import { AuthModule } from './components/auth/auth.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';

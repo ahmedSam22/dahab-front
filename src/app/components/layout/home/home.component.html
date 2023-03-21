@@ -1,6 +1,9 @@
+<section class="body--container">
 
-<section class="d-flex w-auto spaces">
-    <div class="d-flex spaces" >
+<router-outlet></router-outlet>
+</section>
+<section class="d-flex w-auto spaces justify-content-center navigator--container">
+    <div class=" spaces w-100 " >
         <app-card *ngFor="let item of Cards" [title]="item.title"></app-card>
     </div>
 

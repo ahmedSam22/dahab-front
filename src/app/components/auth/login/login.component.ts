@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit{
       console.log(e , "done")
       if(e.status == 200){
         
-        // this.router.navigate(['/auth/login'])
+        this.router.navigate(['/'])
       }
       
     })

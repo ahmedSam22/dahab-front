@@ -22,9 +22,19 @@ export class AuthService {
   forgetPassword(query:userBody){
     return this.http.post(`${environment.baseURL}/forgetpassword` , query)
   }
+  secondLayer(query:userBody){
+    return this.http.post(`${environment.baseURL}/secondlayer` , query)
+  }
 
   newPassword(query:userBody){
     return this.http.post(`${environment.baseURL}/newpassword` , query)
+  }
+
+
+
+  allQuestions(){
+    return this.http.get(`${environment.baseURL}/question/get`)
+
   }
 }
 

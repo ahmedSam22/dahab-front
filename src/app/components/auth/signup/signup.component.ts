@@ -10,21 +10,32 @@ import { map } from 'rxjs';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit{
-  constructor(private service:AuthService,private formbuilder:FormBuilder,private router:Router){}
+  constructor(private service:AuthService,private formbuilder:FormBuilder,private router:Router){
+    this.getAllQuestions()
+  }
   
   submitted = false;
+  secondPhase:Boolean = false;
+  allQuestions:any=[]
   form!:FormGroup;
 
 ngOnInit(){
+  
+  
   this.form = this.formbuilder.group({
     name:["",Validators.required],
     email:["",Validators.required],
     phone:["",Validators.required],
-    nationalID:["",Validators.required],
     password:["",Validators.required],
+    securityquestion:["Select Your Security Question",Validators.required],
+    securityanswer:["",Validators.required],
   })
 }
 
+
+getAllQuestions(){
+  this.service.allQuestions().pipe(map((res:any)=>res["data"])).subscribe(e=>this.allQuestions = e)
+}
 signUp(){
 console.log(this.form.value);
 return this.service.signUp(this.form.value).pipe(map(res=>res)).subscribe(async (res:any)=>{

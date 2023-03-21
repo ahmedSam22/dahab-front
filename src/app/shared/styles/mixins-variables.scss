@@ -7,6 +7,9 @@
 
   .spaces{
     gap: 30px;
+    @media screen and (max-width: 678px) {
+      gap: 5px;
+    }
   }
   .spacesx2{
     gap: 20px;

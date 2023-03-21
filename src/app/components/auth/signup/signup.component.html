@@ -13,11 +13,18 @@
         </div>
         <div class="col-md-8 col-12 inside--box__right--side">
           <div
-            class="d-flex w-100 h-100 justify-content-center align-items-center flex-column spaces "
+            class="d-flex w-100 h-100 justify-content-center align-items-center flex-column spaces"
           >
             <h2 class="text-center">Register</h2>
-            <form class="example-form d-grid spacesx2" [formGroup]="form" (submit)="signUp()">
-              <div class="form-group row">
+            <form
+              class="example-form  "
+              [formGroup]="form"
+              (submit)="signUp()"
+            >
+
+
+            <div class="firstPhase d-grid spaces" *ngIf="!secondPhase">
+                    <div class="form-group row">
                 <input
                   class="form-control form-control-lg"
                   type="text"
@@ -31,16 +38,6 @@
                   type="number"
                   placeholder="Please Enter Your Phone"
                   formControlName="phone"
-
-                />
-              </div>
-              <div class="form-group row">
-                <input
-                  class="form-control form-control-lg"
-                  type="number"
-                  placeholder="Please Enter Your National ID"
-                  formControlName="nationalID"
-
                 />
               </div>
               <div class="form-group row">
@@ -49,7 +46,6 @@
                   type="email"
                   placeholder="Please Enter Your Email"
                   formControlName="email"
-
                 />
               </div>
 
@@ -59,22 +55,60 @@
                     class="form-control form-control-lg"
                     type="password"
                     placeholder="Please Enter Your Password"
-                  formControlName="password"
-
+                    formControlName="password"
                   />
                 </div>
+          
 
-                <small class="text-info forget--password mt-1" [routerLink]="['/auth/login']"
+                <small
+                  class="text-info forget--password mt-1"
+                  [routerLink]="['/auth/login']"
                   >Don't Have Account? Login</small
                 >
               </div>
+
+            </div>
+        
+
+              <div class="security d-grid spaces" *ngIf="secondPhase">
+                <div class="form-group row">
+                  <select
+                    class="form-select form-select-lg mb-0"
+                    aria-label=".form-select-lg example"
+                    formControlName="securityquestion"
+                  >
+                  <option value="1" >select Your Security Question </option>
+
+                    <option [value]="question.question" *ngFor="let question of allQuestions">{{question.question}}</option>
+            
+                  </select>
+                </div>
+
+                <div class="form-group row mb-3">
+                  <input
+                    class="form-control form-control-lg"
+                    type="string"
+                    placeholder="Please Enter Your Email"
+                    formControlName="securityanswer"
+                  />
+                </div>
+
+              </div>
+
+              
               <div class="form-group row">
                 <button
-                  class="mt-2 btn-info btn text-white btn-lg d-block w-100"
+                  class="mt-2 btn-info btn text-white btn-lg d-block w-100" *ngIf="secondPhase"
                 >
                   Register
                 </button>
-                <small class="text-info forget--password mt-1" [routerLink]="['/auth/forget-password']"
+                <input
+                  class="mt-2 btn-info btn text-white btn-lg d-block w-100" type="button" (click)="secondPhase = !secondPhase" value="Next" *ngIf="!secondPhase"
+                />
+
+                <small
+                  class="text-info forget--password mt-1"
+                  [routerLink]="['/auth/forget-password']"
                   >Forget Password ?</small
                 >
               </div>

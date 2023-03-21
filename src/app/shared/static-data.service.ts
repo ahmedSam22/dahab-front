@@ -11,7 +11,7 @@ export class StaticDataService {
       {
         "color" : "hhhh", 
         "image" : "hehehe",
-        "title" : "Hotels&Camps"
+        "title" : "Hotels & Camps"
       },
       {
         "color" : "hhhh", 
