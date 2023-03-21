@@ -1,0 +1,34 @@
+// @mixin spaces {
+//     color: red;
+//     font-size: 25px;
+//     font-weight: bold;
+//     border: 1px solid blue;
+//   }
+
+  .spaces{
+    gap: 30px;
+  }
+  .spacesx2{
+    gap: 20px;
+  }
+
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+
+
+  .w-fit-content{
+    width: fit-content;
+}
+.w-min-content{
+  width: min-content;
+}
+
