@@ -7,12 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  Cards:any;
 
-constructor(readonly data : StaticDataService){
-// console.log(data.Cards);
-this.Cards = data.Cards
-
-
-}
 }

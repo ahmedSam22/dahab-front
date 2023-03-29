@@ -63,7 +63,7 @@
                 <small
                   class="text-info forget--password mt-1"
                   [routerLink]="['/auth/login']"
-                  >Don't Have Account? Login</small
+                  >Already Have Account? Login</small
                 >
               </div>
 
@@ -98,12 +98,12 @@
               
               <div class="form-group row">
                 <button
-                  class="mt-2 btn-info btn text-white btn-lg d-block w-100" *ngIf="secondPhase"
+                  class="mt-2 btn-success custom-bg-primary custom-bg-primary btn text-white btn-lg d-block w-100" *ngIf="secondPhase"
                 >
                   Register
                 </button>
                 <input
-                  class="mt-2 btn-info btn text-white btn-lg d-block w-100" type="button" (click)="secondPhase = !secondPhase" value="Next" *ngIf="!secondPhase"
+                  class="mt-2 btn-success custom-bg-primary custom-bg-primary btn text-white btn-lg d-block w-100" type="button" (click)="secondPhase = !secondPhase" value="Next" *ngIf="!secondPhase"
                 />
 
                 <small

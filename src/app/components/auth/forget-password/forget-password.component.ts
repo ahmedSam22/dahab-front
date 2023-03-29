@@ -26,12 +26,15 @@ export class ForgetPasswordComponent {
   showAnswer:boolean = false
   form!:FormGroup;
   layer2!:FormGroup;
+  user:any;
   forgetPassword(){
     console.log(this.form.value);
     return this.service.forgetPassword(this.form.value).pipe(map(res=>res)).subscribe(async (res:any)=>{
       // console.log(res.status , "done")
       console.log(res )
       // console.log(res.status);
+      this.user = res.user
+      console.log(this.user);
       
        if(res.status === 200){
         this.showAnswer = true

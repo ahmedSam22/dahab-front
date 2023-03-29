@@ -1,26 +1,26 @@
 .outside--box {
   background: linear-gradient(
     to right,
-    rgba(26, 234, 182, 1) 0%,
-    rgba(26, 234, 182, 1) 40%,
+    #c0deff 0%,
+    #c0deff 40%,
     rgb(230, 228, 228) 40%,
     rgba(255, 255, 255, 1) 100%
   );
-  height: 100vh;
+  height: fill-available;
   @media screen and (max-width: 678px) {
     background: linear-gradient(
       to right,
-      rgba(26, 234, 182, 1) 0%,
-      rgba(26, 234, 182, 1) 20%,
+      #c0deff 0%,
+      #c0deff 20%,
       rgb(230, 228, 228) 20%,
       rgba(255, 255, 255, 1) 100%
     );
   }
   .inside--box {
     border-radius: 8px;
-    -webkit-box-shadow: 0px 0px 11px -4px rgba(176, 176, 161, 0.562);
-    -moz-box-shadow: 0px 0px 11px -4px rgb(176, 176, 161, 0.562);
-    box-shadow: 0px 0px 11px -4px rgb(176, 176, 161, 0.562);
+    -webkit-box-shadow: 0px 0px 11px -4px #606F80;
+    -moz-box-shadow: 0px 0px 11px -4px #606F80;
+    box-shadow: 0px 0px 11px -4px #606F80;
 
     width: 70%;
     height: 90%;

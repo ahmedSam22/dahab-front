@@ -1,0 +1,53 @@
+// @media screen and (max-width: 468px) {
+//     .body--container {
+//       max-width: 100%;
+//       min-height: 83%;
+//     }
+  
+//     .navigator--container {
+//       padding: 0px 3%;
+//       overflow-x: auto;
+//       max-width: 100%;
+//       min-height: 13%;
+//       & > div {
+//         justify-content: center;
+//         display: flex;
+//       //   @media screen and (max-width: 1200px) {
+//       //     justify-content: start;
+//       //   }
+//       }
+//     }
+//   }
+  
+//   .body--container {
+//     max-width: 100%;
+//     min-height: 82%;
+//   }
+  
+//   .navigator--container {
+//     overflow-x: auto;
+//     max-width: 100%;
+//     min-height: 15%;
+//     & > div {
+//       justify-content: center;
+//       display: flex;
+//       @media screen and (max-width: 1200px) {
+//         justify-content: start;
+//       }
+//     }
+//   }
+  
+  
+//   .app--card{
+//       height: fit-content;
+//   }
+
+
+.navigator--container{
+  max-width: 100%;
+  overflow-x: auto;
+  justify-content: center;
+  @media screen and (max-width: 1200px) {
+            justify-content: start;
+          }
+}

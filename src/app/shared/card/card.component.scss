@@ -1,0 +1,13 @@
+
+section{
+    border-radius: 5px;
+    overflow: hidden;
+    .card-container{
+    min-width: 147px;
+    gap: 10px;
+    img{
+            filter: invert(1);
+
+        }
+}
+}

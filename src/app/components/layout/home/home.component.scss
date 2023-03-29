@@ -1,17 +1,8 @@
-.body--container{
-    max-width: 100%;
-    min-height: 85%;
+.layout--container{
+  min-height: 82% !important;
+  // display: inline-block;
 }
 
-.navigator--container{
-    overflow-x: auto;
-    max-width: 100%;
-    min-height: 15%;
-    &> div{
-justify-content: center;   
-display: flex;
-@media screen and (max-width: 1200px) {
-    justify-content: start;   
-  }
-}
+.navigator--container{  
+  height: 17%;
 }

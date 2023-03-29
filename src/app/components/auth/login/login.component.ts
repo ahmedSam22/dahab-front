@@ -1,3 +1,4 @@
+import { environment } from './../../../../../environments/environment';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ErrorStateMatcher } from '@angular/material/core';
@@ -25,6 +26,9 @@ export class LoginComponent implements OnInit{
     console.log(this.form.value);
     return this.service.login(this.form.value).subscribe((e:any)=>{
       console.log(e , "done")
+      if(e.token){
+        localStorage.setItem(`${environment.currentUserKey}` , e.token)
+      }
       if(e.status == 200){
         
         this.router.navigate(['/'])
