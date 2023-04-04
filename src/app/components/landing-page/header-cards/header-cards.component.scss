@@ -1,0 +1,19 @@
+.card--container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  &__card {
+    width: 20%;
+    &__icon {
+      .fa-2xl {
+        font-size: 3rem;
+      }
+    }
+    &__title{
+color: white;
+    }
+    &__desc{
+        color: white;
+    }
+  }
+}
