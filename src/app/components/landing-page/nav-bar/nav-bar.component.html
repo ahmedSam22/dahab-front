@@ -1,16 +1,17 @@
-<section class="nav--bar px-5 py-4">
+<section class="d-flex justify-content-end py-4 navbar--container align-items-center px-2">
+    <section class="nav--bar px-5  hide-nav" #navbar>
     <div class="nav--bar__info">
         <span class="d-flex gap-4">
             <div class="nav--bar__info__mail d-flex gap-2 align-items-center">
                    
-                <a href="" class="text-white">
+                <a href="" class="text-white text-center">
                     <img src="assets/images/logo.png" width="40%" alt="" srcset="">
                 </a>
             </div>
 
              </span>
     </div>
-    <div class="nav--bar__navigation">
+    <div class="nav--bar__navigation ">
         <ul class="gap-4">
             <li>
                 <a href="">HOME</a>
@@ -24,4 +25,10 @@
       
         </ul>
     </div>
+
+</section>
+<button class="p-1 collapse-btn" (click)="showNavbar()">
+
+    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+</button>
 </section>

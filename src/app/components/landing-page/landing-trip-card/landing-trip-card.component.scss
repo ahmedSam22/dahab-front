@@ -1,0 +1,41 @@
+.card--container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #000000;
+    border-radius: 7px;
+    overflow: hidden;
+    &__header{
+        position: relative;
+        &__like{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: inherit;
+            border: none;
+        }
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &__title{
+
+        }
+        &__rate{
+
+        }
+        &__price{
+
+        }
+        &__desc{
+
+        }
+        &__button{
+            button{
+                height: 3rem;
+                width: 100%;
+            }
+        }
+    }
+}

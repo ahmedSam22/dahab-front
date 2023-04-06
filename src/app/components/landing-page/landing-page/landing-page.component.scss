@@ -1,6 +1,6 @@
 .header{
     background-image: url("../../../../assets/images/demo.jpg");
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     mix-blend-mode: lighten;
     &__text{
@@ -18,4 +18,8 @@
     }
     }
    
+}
+
+.overlay{
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 100%);
 }
