@@ -9,7 +9,7 @@ import { HeaderCardsComponent } from './header-cards/header-cards.component';
 import { HeaderTextComponent } from './header-text/header-text.component';
 import { LandingHotelsComponent } from './landing-hotels/landing-hotels.component';
 import { LandingHotelCardComponent } from './landing-hotels-card/landing-hotel-card.component';
-import { HotelSecComponent } from './hotel-sec/hotel-sec.component';
+import { TripSecComponent } from './trip-sec/trip-sec.component';
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { HotelSecComponent } from './hotel-sec/hotel-sec.component';
     HeaderTextComponent,
     LandingHotelsComponent,
     LandingHotelCardComponent,
-    HotelSecComponent
+    TripSecComponent
   ],
   imports: [
     CommonModule,
