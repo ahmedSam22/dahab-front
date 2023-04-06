@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1680740944776,
+  "timestamp": 1680741196874,
   "index": "/dahab-front/index.html",
   "assetGroups": [
     {
@@ -67,7 +67,7 @@
     "/dahab-front/assets/images/logo.png": "d4a21b22fbd4a22d98e30be0d5dbdc6b33e4524c",
     "/dahab-front/demo.7906830e3b32d85a.jpg": "d1cb3e9ad9b3d57c55dc7d81e669172728588078",
     "/dahab-front/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/dahab-front/index.html": "7f03cc20277d0d9039e4fbc6b422d8f0bf63a018",
+    "/dahab-front/index.html": "4721e60ec13085acba8f2976929b4d7b7902b6e9",
     "/dahab-front/main.be5491d43fd5bdd7.js": "27183243597fc116bb20a47956995ba865ed2890",
     "/dahab-front/manifest.webmanifest": "34ee8c159125507a04676d87f4bddd6f305714b2",
     "/dahab-front/polyfills.fc8c9bb4e351b3a8.js": "da894a41a36af3a8b3b0f398934e450a82b4bb68",
