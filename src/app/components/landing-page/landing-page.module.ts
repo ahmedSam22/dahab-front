@@ -7,8 +7,9 @@ import { ContactBarComponent } from './contact-bar/contact-bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeaderCardsComponent } from './header-cards/header-cards.component';
 import { HeaderTextComponent } from './header-text/header-text.component';
-import { LandingTripsComponent } from './landing-trips/landing-trips.component';
-import { LandingTripCardComponent } from './landing-trip-card/landing-trip-card.component';
+import { LandingHotelsComponent } from './landing-hotels/landing-hotels.component';
+import { LandingHotelCardComponent } from './landing-hotels-card/landing-hotel-card.component';
+import { HotelSecComponent } from './hotel-sec/hotel-sec.component';
 
 
 @NgModule({
@@ -18,8 +19,9 @@ import { LandingTripCardComponent } from './landing-trip-card/landing-trip-card.
     NavBarComponent,
     HeaderCardsComponent,
     HeaderTextComponent,
-    LandingTripsComponent,
-    LandingTripCardComponent
+    LandingHotelsComponent,
+    LandingHotelCardComponent,
+    HotelSecComponent
   ],
   imports: [
     CommonModule,
