@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1680756900782,
+  "timestamp": 1680757236516,
   "index": "/dahab-front/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "/dahab-front/776.554890ed1863258b.js",
         "/dahab-front/favicon.ico",
         "/dahab-front/index.html",
-        "/dahab-front/main.1d408f9d62c2b3c4.js",
+        "/dahab-front/main.f93f5a1551b75ef6.js",
         "/dahab-front/manifest.webmanifest",
         "/dahab-front/polyfills.fc8c9bb4e351b3a8.js",
         "/dahab-front/runtime.2773ab1b3b6a80a4.js",
@@ -69,8 +69,8 @@
     "/dahab-front/assets/images/test.jpg": "e26d410164a8f72cca04b7f7106f6f9686c7b2a5",
     "/dahab-front/demo.7906830e3b32d85a.jpg": "d1cb3e9ad9b3d57c55dc7d81e669172728588078",
     "/dahab-front/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/dahab-front/index.html": "8971fd1af210aab622cf258d537cf5ef6f15e50e",
-    "/dahab-front/main.1d408f9d62c2b3c4.js": "f74432625f8788ee4cfcc2e184d9df6d981bab3a",
+    "/dahab-front/index.html": "972f7b1bd10552e6173266771a78037e85d51334",
+    "/dahab-front/main.f93f5a1551b75ef6.js": "ce5956450723f18278511402f10bef712f6d5cfe",
     "/dahab-front/manifest.webmanifest": "34ee8c159125507a04676d87f4bddd6f305714b2",
     "/dahab-front/polyfills.fc8c9bb4e351b3a8.js": "da894a41a36af3a8b3b0f398934e450a82b4bb68",
     "/dahab-front/runtime.2773ab1b3b6a80a4.js": "93a9100bc7b0d0ed35c4bd00abd8b01dbabdbfd8",
