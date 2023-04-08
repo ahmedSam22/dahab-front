@@ -1,5 +1,5 @@
 {
-  "homepage" : "https://ahmedsam22.github.io/dahab-front/",
+  "homepage": "https://ahmedsam22.github.io/dahab-front/",
   "name": "dahab-app",
   "version": "0.0.0",
   "scripts": {
@@ -24,6 +24,7 @@
     "@angular/service-worker": "^15.0.0",
     "bootstrap": "^5.2.3",
     "mapbox-gl": "^2.13.0",
+    "ngx-dropzone": "^3.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
