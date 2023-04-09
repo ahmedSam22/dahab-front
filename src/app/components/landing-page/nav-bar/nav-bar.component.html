@@ -1,34 +1,39 @@
-<section class="d-flex justify-content-end py-4 navbar--container align-items-center px-2">
-    <section class="nav--bar px-5  hide-nav" #navbar>
-    <div class="nav--bar__info">
-        <span class="d-flex gap-4">
-            <div class="nav--bar__info__mail d-flex gap-2 align-items-center">
-                   
-                <a href="" class="text-white text-center">
-                    <img src="assets/images/logo.png" width="40%" alt="" srcset="">
-                </a>
-            </div>
+<nav
+  class="navbar navbar-expand-lg bg-body-tertiary navbar--container nav--bar p-4"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"
+      ><img src="assets/images/logo.png" width="40%" alt="" srcset=""
+    /></a>
+    <button
+      class="navbar-toggler text-white"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+    </button>
+    <div
+      class="collapse navbar-collapse nav--bar__navigation justify-content-end"
+      id="navbarSupportedContent"
+    >
 
-             </span>
+      <form class="d-flex" role="search">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="">Hotels</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Trip Offices</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Trips</a>
+          </li>
+          </ul>
+      </form>
     </div>
-    <div class="nav--bar__navigation ">
-        <ul class="gap-4">
-            <li>
-                <a href="">HOME</a>
-            </li>
-            <li>
-                <a href="">ACCOUNT</a>
-            </li>
-            <li>
-                <a href="">LOGIN</a>
-            </li>
-      
-        </ul>
-    </div>
-
-</section>
-<button class="p-1 collapse-btn" (click)="showNavbar()">
-
-    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
-</button>
-</section>
+  </div>
+</nav>

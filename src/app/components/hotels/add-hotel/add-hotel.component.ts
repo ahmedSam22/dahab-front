@@ -14,6 +14,7 @@ export class AddHotelComponent implements OnInit{
 
 
   ngOnInit(): void {
+    // this.getLocation()
     this.form = this.formbuilder.group({
       name:["",Validators.required],
       // password:["",Validators.required],
@@ -50,5 +51,12 @@ export class AddHotelComponent implements OnInit{
     })
     
     }
+
+
+    // getLocation(){
+     
+    //   navigator.geolocation.getCurrentPosition(res=>{console.log(res) 
+    //     })
+    // }
 
 }
