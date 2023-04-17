@@ -1,12 +1,10 @@
-import { MapComponent } from './../../shared/map/map.component';
-import { LoginComponent } from './../auth/login/login.component';
 import { AddHotelComponent } from './add-hotel/add-hotel.component';
-import { HotelsComponent } from './hotels/hotels.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HotelsComponent } from './hotels/hotels.component';
 
 const routes: Routes = [
-  { path:"" , component:LoginComponent},
+  { path:"" , component:HotelsComponent},
   { path:"add" , component:AddHotelComponent},
   
 ];

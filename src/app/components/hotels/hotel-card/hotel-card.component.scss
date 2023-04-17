@@ -1,0 +1,37 @@
+.card{
+  background-color: white;
+
+  &__carousel{
+    position: relative !important;
+    .carousel-control-prev ,.carousel-control-next{
+      background-color: rgb(96 100 100 / 49%);
+    }
+  }
+  &__details{
+    ul{
+      list-style:none
+    }
+  }
+  &__price{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 768px)  {
+      justify-content: start  ;
+
+    }
+    &__like{
+      background: inherit;
+      width: fit-content;
+      border: 0;
+      // align-self: flex-end;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+  }
+}
+
+.carousel{
+height: 100% !important;
+}

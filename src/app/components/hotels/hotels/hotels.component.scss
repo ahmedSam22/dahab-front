@@ -1,0 +1,21 @@
+.filter--section{
+background: white;
+mat-slider {
+  width: 300px;
+  max-width: 100%;
+}
+}
+
+
+*{
+  transition: all 500ms ease-in-out; 
+
+}
+
+
+@media (max-width: 768px)  {
+  .show{
+    display: none;
+  }
+
+}

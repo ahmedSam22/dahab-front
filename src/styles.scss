@@ -2,38 +2,43 @@
 @import "./app/shared/styles/mixins-variables.scss";
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: -webkit-fill-available; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color: #f5f5f5; box-sizing: border-box;color: white;}
-
-
-.custom-bg-primary{
-    background-color: #C0DEFF !important;
-    &:hover{
-        background-color: #c0deffa8 !important;
-    
-        }
+html,
+body {
+  height: -webkit-fill-available;
 }
-.custom-bg-secondary{
-    background-color: #C7E8CA !important;
-    &:hover{
-        background-color: #c7e8ca8e !important;
-    
-        }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+//   color: white;
 }
-.custom-bg-third{
-    background-color: #FFD966 !important;
-    &:hover{
+
+.custom-bg-primary {
+  background-color: #c0deff !important;
+  &:hover {
+    background-color: #c0deffa8 !important;
+  }
+}
+.custom-bg-secondary {
+  background-color: #c7e8ca !important;
+  &:hover {
+    background-color: #c7e8ca8e !important;
+  }
+}
+.custom-bg-third {
+  background-color: #ffd966 !important;
+  &:hover {
     background-color: #ffd9668f !important;
-
-    }
+  }
 }
 //  *{
 //     direction: rtl;
 //  }
 
 // *{
-     // border: 1px solid red;
+// border: 1px solid red;
 // }
-a{
-    color: white;
-}
+// a{
+//     color: white;
+// }

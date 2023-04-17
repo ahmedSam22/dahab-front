@@ -1,16 +1,43 @@
+<section class="py-3 filter--section">
+  <div class="container">
+    <div class="container">
+        <div class="row align-items-center">
+       <div class="col">
+        <mat-chip-listbox aria-label="Hotel selection">
+          <mat-chip-option>Hotel</mat-chip-option>
+          <mat-chip-option>Camp</mat-chip-option>
+          <mat-chip-option >House</mat-chip-option>
+          <mat-chip-option color="warn">All</mat-chip-option>
+        </mat-chip-listbox>
+       </div>
+       <div class="col d-flex flex-column">
+        <label>Price/Night</label>
+        <mat-slider min="200" max="2000" >
+          <input value="300" #fromPrice  matSliderStartThumb>
+          <input value="1200" #toPrice matSliderEndThumb>
+        </mat-slider>
+       </div>
+       <div class="col">
+        <button class="btn btn-outline-primary">Filter</button>
+       </div>
+        </div>
+    </div>
+  </div>
+</section>
 
+<section class="py-3">
+  <div class="container">
+<div class="row">
+     <div class="col">
+      <app-hotel-card  [data]="allData"></app-hotel-card>
+    </div>
+    <div class="col-4 show" *ngIf="show">
+      hhh
+    </div>
+    <button (click)="show = !show">show</button>
+</div>
+ 
+  </div>
+</section>
 
-<!-- <img src="../../../../assets/images/auth.jpg" width="100%" height="100%" alt="" srcset=""> -->
-<!-- <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Medium</mat-card-subtitle>
-        <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"  alt="Image of a Shiba Inu">
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content>
-      {{longText}}
-    </mat-card-content>
-  </mat-card>
-   -->
+<img src="~/uploads/1681004999617.jpg" alt="" srcset="">
