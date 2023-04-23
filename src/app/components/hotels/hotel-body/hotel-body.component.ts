@@ -10,7 +10,7 @@ import { HotelServiceService } from '../hotel-service.service';
 export class HotelBodyComponent {
   allData:any;
   constructor(private service:HotelServiceService,private router:Router){
-    this.service.allHotels().subscribe((res:any)=>this.allData = res['data']
+    this.service.allHotels(1).subscribe((res:any)=>this.allData = res['data']
     )
     }
 }

@@ -49,14 +49,14 @@
     </div>
     <div class="col-md-6 col-12 card__details ">
       <div class="d-flex flex-column p-3">
-        <h3 class="card__details__name">Hotel Name</h3>
+        <h3 class="card__details__name">{{name}}</h3>
         <button class="btn btn-link w-fit-content p-0"><i class="fas fa-map-marker-alt"></i> Show On Map</button>
         <button class="btn btn-link w-fit-content p-0"><small>(reviews if founded)</small></button>
-
+        <span>{{dist}} <small class="text-muted fs-6">KM from center</small> </span>
         <ul class="p-0 pt-1">
-          <li> <i class="fa-solid fa-check text-success me-1"></i>breakfast included</li>
-          <li><i class="fa-solid fa-check text-success me-1"></i> Free Wifi</li>
-          <li><i class="fa-solid fa-check text-success me-1"></i>Pets </li>
+          <li><i class="me-1" [class]="breakfast ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'" ></i>Break Fast</li>
+          <li><i class="me-1" [class]="wifi ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'"></i>Wifi</li>
+          <li><i class="me-1" [class]="pets ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'"></i>Pets </li>
 
         </ul>
       </div>

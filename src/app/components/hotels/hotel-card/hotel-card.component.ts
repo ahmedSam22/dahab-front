@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+// import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-hotel-card',
@@ -9,6 +9,12 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class HotelCardComponent {
   //  carousel = new bootstrap.Carousel('#myCarousel')
   @Input() data:any;
+  @Input() name:any;
+  @Input() dist:any;
+  @Input() wifi:any;
+  @Input() pool:any;
+  @Input() pets:any;
+  @Input() breakfast:any;
 
   constructor(){
     // console.log(this.data , "dsaji");
@@ -16,6 +22,8 @@ export class HotelCardComponent {
   }
   ngOnInit(){
 // alert(this.data)
+// console.log(this.data  , "inside card");
+
   }
 
 }

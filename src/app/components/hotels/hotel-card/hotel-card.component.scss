@@ -1,5 +1,5 @@
 .card{
-  background-color: white;
+  background-color: #0000008c;
 
   &__carousel{
     position: relative !important;
@@ -28,10 +28,15 @@
       position: absolute;
       right: 20px;
       top: 10px;
+      color: #0534c7;
     }
   }
 }
 
 .carousel{
 height: 100% !important;
+}
+
+*{
+  background-image: url('/src/assets/images/hotelsbg.jpg');
 }

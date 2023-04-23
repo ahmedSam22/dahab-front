@@ -1,43 +1,93 @@
-<section class="py-3 filter--section">
-  <div class="container">
+<body>
+  <section class="py-3 filter--section">
     <div class="container">
+      <div class="container">
         <div class="row align-items-center">
-       <div class="col">
-        <mat-chip-listbox aria-label="Hotel selection">
-          <mat-chip-option>Hotel</mat-chip-option>
-          <mat-chip-option>Camp</mat-chip-option>
-          <mat-chip-option >House</mat-chip-option>
-          <mat-chip-option color="warn">All</mat-chip-option>
-        </mat-chip-listbox>
-       </div>
-       <div class="col d-flex flex-column">
-        <label>Price/Night</label>
-        <mat-slider min="200" max="2000" >
-          <input value="300" #fromPrice  matSliderStartThumb>
-          <input value="1200" #toPrice matSliderEndThumb>
-        </mat-slider>
-       </div>
-       <div class="col">
-        <button class="btn btn-outline-primary">Filter</button>
-       </div>
+          <div class="col">
+            <mat-chip-listbox aria-label="Hotel selection">
+              <mat-chip-option>Hotel</mat-chip-option>
+              <mat-chip-option>Camp</mat-chip-option>
+              <mat-chip-option>House</mat-chip-option>
+              <mat-chip-option color="warn">All</mat-chip-option>
+            </mat-chip-listbox>
+          </div>
+          <div class="col d-flex flex-column">
+            <label>Price/Night</label>
+            <mat-slider min="200" max="2000">
+              <input value="300" #fromPrice matSliderStartThumb />
+              <input value="1200" #toPrice matSliderEndThumb />
+            </mat-slider>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-primary">Filter</button>
+          </div>
         </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="py-3">
-  <div class="container">
-<div class="row">
-     <div class="col">
-      <app-hotel-card  [data]="allData"></app-hotel-card>
+  <section class="py-3 my-3 card--section">
+    <div class="container">
+      <div class="row">
+        <div class="col gap-2 d-flex flex-column card--section__container">
+          <app-hotel-card
+            *ngFor="let card of allData['data']"
+            [name]="card.name"
+            [dist]="card.distance"
+            [breakfast]="card.breakfast"
+            [pets]="card.pets"
+            [wifi]="card.wifi"
+          ></app-hotel-card>
+        </div>
+        <div class="col-4 show" *ngIf="show">hhh+</div>
+      </div>
     </div>
-    <div class="col-4 show" *ngIf="show">
-      hhh
-    </div>
-    <button (click)="show = !show">show</button>
-</div>
- 
-  </div>
-</section>
+  </section>
 
-<img src="~/uploads/1681004999617.jpg" alt="" srcset="">
+  <section class="pagination--section">
+    <nav aria-label="...">
+      <ul class="pagination justify-content-center">
+        <li
+          class="page-item"
+          [ngClass]="{ disabled: 1 === +allData.currentPage }"
+        >
+          <button
+            [disabled]="1 === +allData.currentPage"
+            class="page-link"
+            (click)="getAllHotels(+allData.currentPage - 1)"
+          >
+            Previous
+          </button>
+        </li>
+        <li
+          class="page-item"
+          *ngFor="let page of allData.pages"
+          (click)="getAllHotels(page)"
+        >
+          <a
+            class="page-link"
+            [ngClass]="{ active: page === +allData.currentPage }"
+            >{{ page }}</a
+          >
+        </li>
+
+        <li
+          class="page-item"
+          [ngClass]="{
+            disabled: allData.pages.length === +allData.currentPage
+          }"
+        >
+          <button
+            [disabled]="allData.pages.length === +allData.currentPage"
+            class="page-link"
+            (click)="getAllHotels(+allData.currentPage + 1)"
+          >
+            Next
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <button (click)="show = !show">show</button>
+</body>

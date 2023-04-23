@@ -12,8 +12,11 @@ export class HotelsComponent {
   show = false
   allData:any;
   constructor(private service:HotelServiceService,private router:Router){
-    this.service.allHotels().subscribe((res:any)=>{this.allData = res['data'] ;console.log(this.allData)}
-    
-    )
+  this.getAllHotels(1)
+    }
+
+    getAllHotels(page:number){
+      this.service.allHotels(page).subscribe((res:any)=>{this.allData = res ;console.log(this.allData)}
+      )
     }
 }

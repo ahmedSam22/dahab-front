@@ -11,8 +11,8 @@ export class HotelServiceService {
     
   }
 
-  allHotels(){
-    return this.http.get(`${environment.baseURL}/hotels/get`)
+  allHotels(page:number){
+    return this.http.get(`${environment.baseURL}/hotels/get?page=${page}`)
   }
 
 
