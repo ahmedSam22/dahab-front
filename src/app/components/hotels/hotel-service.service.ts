@@ -11,9 +11,28 @@ export class HotelServiceService {
     
   }
 
-  allHotels(page:number){
-    return this.http.get(`${environment.baseURL}/hotels/get?page=${page}`)
+  allHotels(page:number , f?:any){
+    var params = ''
+    if(f){
+      const {type , startPrice , endPrice } = f
+    if(type) params += `&type=${type}`
+    if(startPrice) params += `&startPrice=${startPrice}`
+    if(endPrice) params += `&endPrice=${endPrice}`
+
+    }
+    
+    return this.http.get(`${environment.baseURL}/hotels/get?page=${page}${params}`)
   }
+
+  // filteredHotels(page:number , f:any){
+  //   const {type , startPrice , endPrice } = f
+  //   var params = ''
+  //   if(type) params += `&type=${type}`
+  //   if(startPrice) params += `&startPrice=${startPrice}`
+  //   if(endPrice) params += `&endPrice=${endPrice}`
+
+  //   return this.http.get(`${environment.baseURL}/hotels/filtered?page=${page}${params}`)
+  // }
 
 
 }

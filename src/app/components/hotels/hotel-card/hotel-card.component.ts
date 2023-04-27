@@ -15,6 +15,8 @@ export class HotelCardComponent {
   @Input() pool:any;
   @Input() pets:any;
   @Input() breakfast:any;
+  @Input() type:any;
+  @Input() price:any;
 
   constructor(){
     // console.log(this.data , "dsaji");

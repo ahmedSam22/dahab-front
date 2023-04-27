@@ -4,22 +4,36 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col">
-            <mat-chip-listbox aria-label="Hotel selection">
+            <mat-chip-listbox aria-label="Hotel selection" [(ngModel)]="type">
               <mat-chip-option>Hotel</mat-chip-option>
               <mat-chip-option>Camp</mat-chip-option>
               <mat-chip-option>House</mat-chip-option>
               <mat-chip-option color="warn">All</mat-chip-option>
             </mat-chip-listbox>
           </div>
+
+          <!-- <div class="col">
+            <mat-chip-listbox aria-label="Size selection">
+              <mat-chip-option>Single</mat-chip-option>
+              <mat-chip-option>Double</mat-chip-option>
+              <mat-chip-option>Tripple</mat-chip-option>
+              <mat-chip-option color="warn">All</mat-chip-option>
+            </mat-chip-listbox>
+          </div> -->
           <div class="col d-flex flex-column">
             <label>Price/Night</label>
-            <mat-slider min="200" max="2000">
-              <input value="300" #fromPrice matSliderStartThumb />
-              <input value="1200" #toPrice matSliderEndThumb />
+            <span>
+              <!-- Starts from <span class="text-primary"> {{fromPrice.value}} </span> -->
+              <!-- to <span class="text-primary"> {{toPrice.value}}</span>  -->
+            </span>
+            {{startPrice}}
+            <mat-slider min="0" max="8000">
+              <input value="300"  matSliderStartThumb [(ngModel)]="startPrice" />
+              <input value="1200"  matSliderEndThumb [(ngModel)]="endPrice" />
             </mat-slider>
           </div>
           <div class="col">
-            <button class="btn btn-outline-primary">Filter</button>
+            <button class="btn btn-outline-primary" (click)="getAllHotels(1)"> Filter</button>
           </div>
         </div>
       </div>
@@ -37,6 +51,8 @@
             [breakfast]="card.breakfast"
             [pets]="card.pets"
             [wifi]="card.wifi"
+            [type]="card.type"
+            [price]="card.price"
           ></app-hotel-card>
         </div>
         <div class="col-4 show" *ngIf="show">hhh+</div>
@@ -89,5 +105,5 @@
     </nav>
   </section>
 
-  <button (click)="show = !show">show</button>
+  <!-- <button (click)="show = !show">show</button> -->
 </body>

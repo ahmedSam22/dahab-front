@@ -11,6 +11,9 @@
     ul{
       list-style:none
     }
+    .badge{
+      height: fit-content;
+    }
   }
   &__price{
     position: relative;
