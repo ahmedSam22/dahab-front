@@ -14,6 +14,7 @@ import { HotelCardComponent } from './hotel-card/hotel-card.component';
 import { HotelBodyComponent } from './hotel-body/hotel-body.component';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSliderModule} from '@angular/material/slider';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -36,6 +37,7 @@ import {MatSliderModule} from '@angular/material/slider';
     MatSidenavModule,
     MatChipsModule,
     MatSliderModule,
+    MatDialogModule
 
 
   ]

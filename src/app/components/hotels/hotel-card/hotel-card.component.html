@@ -56,7 +56,7 @@
 
         </span>
       
-        <button class="btn btn-link w-fit-content p-0"><i class="fas fa-map-marker-alt"></i> Show On Map</button>
+        <button (click)="showMap()" class="btn btn-link w-fit-content p-0"><i class="fas fa-map-marker-alt"></i> Show On Map</button>
         <button class="btn btn-link w-fit-content p-0"><small>(reviews if founded)</small></button>
         <span>{{dist}} <small class="text-muted fs-6">KM from center</small> </span>
         <ul class="p-0 pt-1">
@@ -67,9 +67,9 @@
         </ul>
       </div>
     </div>
-    <div class="col-md-3 col-12 card__price ">
-      <button class="card__price__like">
-        <i class="fa-regular fa-heart fs-4"></i>
+    <div class="col-md-3 col-12 card__price">
+      <button class="card__price__like" (click)="hotelFavourite()">
+        <i [class]=" favourite  ? 'fa-solid fa-heart fs-4' : 'fa-regular fa-heart fs-4'"></i>
     </button>
       <div class="d-flex flex-column justify-content-end p-3">
      
@@ -78,7 +78,7 @@
           312$</h3>/ <small>per night</small>
       </span>
 
-      <button class="btn-outline-primary btn mt-2">Show more</button>
+      <button class="btn-outline-primary btn mt-2" (click)="hotelDetaild(id)">Show more</button>
      
 
       </div>

@@ -27,9 +27,9 @@
               <!-- to <span class="text-primary"> {{toPrice.value}}</span>  -->
             </span>
             {{startPrice}}
-            <mat-slider min="0" max="8000">
-              <input value="300"  matSliderStartThumb [(ngModel)]="startPrice" />
-              <input value="1200"  matSliderEndThumb [(ngModel)]="endPrice" />
+            <mat-slider min="0" max="8000" >
+              <input  type="number" matSliderStartThumb [(ngModel)]="startPrice" />
+              <input   matSliderEndThumb [(ngModel)]="endPrice" />
             </mat-slider>
           </div>
           <div class="col">
@@ -53,6 +53,10 @@
             [wifi]="card.wifi"
             [type]="card.type"
             [price]="card.price"
+            [id]="card._id"
+            [lat]="card.location.lat"
+            [lng]="card.location.lng"
+            [favs]="favs"
           ></app-hotel-card>
         </div>
         <div class="col-4 show" *ngIf="show">hhh+</div>

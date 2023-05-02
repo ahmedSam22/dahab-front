@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectorRef, HostBinding } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, HostBinding, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { environment } from 'environments/environment';
 const mapboxgl = require('mapbox-gl');
 @Component({
@@ -8,14 +9,14 @@ const mapboxgl = require('mapbox-gl');
 })
 export class MapComponent {
   
-  constructor(){
+  constructor(@Inject(MAT_DIALOG_DATA)public data:any){
 
     
   }
   map: any;
   style = 'mapbox://styles/mapbox/streets-v11';
-  lat = 32.20510545;
-  lng = 29.48544854;
+  lat = this.data.lat;
+  lng = this.data.lng;
 
   ngOnInit() {
 
@@ -23,9 +24,16 @@ export class MapComponent {
     // mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
     this.map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11'
+      style: this.style,
+      zoom: 15,
+      center: [this.lng, this.lat]
     });
     // Add map controls
     this.map.addControl(new mapboxgl.NavigationControl());
+  }
+
+
+  showOnGoogle(){
+    window.open(`https://maps.google.com/?q=${this.lat} +${this.lng}`, 'blank');
   }
 }

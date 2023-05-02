@@ -12,8 +12,9 @@ export class HotelsComponent {
   show = false
   allData:any;
   type:any = 'All';
-  startPrice =1000;
+  startPrice:any =1000;
   endPrice=6000;
+  favs:any;
   constructor(private service:HotelServiceService,private router:Router){
   this.getAllHotels(1)
     }
@@ -25,7 +26,11 @@ export class HotelsComponent {
       if(this.startPrice) query.startPrice = this.startPrice;
       if(this.endPrice) query.endPrice = this.endPrice;
   
-      this.service.allHotels(page , query).subscribe((res:any)=>{this.allData = res ;console.log(this.allData)}
+      this.service.allHotels(page , query).subscribe((res:any)=>{this.allData = res ;console.log(this.allData);
+      this.favs = res['favs'];
+      // console.log(this.favs , "favourites");
+      
+      }
       )
     }
 
@@ -45,4 +50,7 @@ export class HotelsComponent {
 
 
 //     }
+
+
+
 }

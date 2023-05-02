@@ -6,7 +6,7 @@ import { environment } from 'environments/environment';
   providedIn: 'root'
 })
 export class HotelServiceService {
-
+allFavs:any;
   constructor(public http:HttpClient) { 
     
   }
@@ -34,5 +34,14 @@ export class HotelServiceService {
   //   return this.http.get(`${environment.baseURL}/hotels/filtered?page=${page}${params}`)
   // }
 
+hotelDetails(id:any){
+  return this.http.get(`${environment.baseURL}/hotels/getOne?id=${id}`)
 
+}
+
+
+hotelFavourite(id:any){
+  return this.http.get(`${environment.baseURL}/hotels/favourite?id=${id}`)
+
+}
 }
