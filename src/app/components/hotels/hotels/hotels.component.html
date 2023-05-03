@@ -26,10 +26,10 @@
               <!-- Starts from <span class="text-primary"> {{fromPrice.value}} </span> -->
               <!-- to <span class="text-primary"> {{toPrice.value}}</span>  -->
             </span>
-            {{startPrice}}
+            {{start.value}} , {{end.value}}
             <mat-slider min="0" max="8000" >
-              <input  type="number" matSliderStartThumb [(ngModel)]="startPrice" />
-              <input   matSliderEndThumb [(ngModel)]="endPrice" />
+              <input   matSliderStartThumb #start (mouseup)="this.startPrice = start.value" />
+              <input   matSliderEndThumb #end  (mouseup)="this.endPrice = end.value" />
             </mat-slider>
           </div>
           <div class="col">

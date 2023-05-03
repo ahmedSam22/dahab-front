@@ -12,8 +12,8 @@ export class HotelsComponent {
   show = false
   allData:any;
   type:any = 'All';
-  startPrice:any =1000;
-  endPrice=6000;
+  startPrice:any =0;
+  endPrice:any=6000;
   favs:any;
   constructor(private service:HotelServiceService,private router:Router){
   this.getAllHotels(1)
