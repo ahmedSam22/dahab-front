@@ -45,7 +45,7 @@
       <div class="row">
         <div class="col gap-2 d-flex flex-column card--section__container">
           <app-hotel-card
-            *ngFor="let card of allData['data']"
+            *ngFor="let card of allData?.data"
             [name]="card.name"
             [dist]="card.distance"
             [breakfast]="card.breakfast"
@@ -59,34 +59,35 @@
             [favs]="favs"
           ></app-hotel-card>
         </div>
-        <div class="col-4 show" *ngIf="show">hhh+</div>
+        <!-- <div class="col-4   show" *ngIf="show">hhh+</div> -->
       </div>
     </div>
   </section>
 
+  <!-- <button (click)="show = !show">show</button> -->
   <section class="pagination--section">
     <nav aria-label="...">
       <ul class="pagination justify-content-center">
         <li
           class="page-item"
-          [ngClass]="{ disabled: 1 === +allData.currentPage }"
+          [ngClass]="{ disabled: 1 === +allData?.currentPage }"
         >
           <button
-            [disabled]="1 === +allData.currentPage"
+            [disabled]="1 === +allData?.currentPage"
             class="page-link"
-            (click)="getAllHotels(+allData.currentPage - 1)"
+            (click)="getAllHotels(+allData?.currentPage - 1)"
           >
             Previous
           </button>
         </li>
         <li
           class="page-item"
-          *ngFor="let page of allData.pages"
+          *ngFor="let page of allData?.pages"
           (click)="getAllHotels(page)"
         >
           <a
             class="page-link"
-            [ngClass]="{ active: page === +allData.currentPage }"
+            [ngClass]="{ active: page === +allData?.currentPage }"
             >{{ page }}</a
           >
         </li>
@@ -94,13 +95,13 @@
         <li
           class="page-item"
           [ngClass]="{
-            disabled: allData.pages.length === +allData.currentPage
+            disabled: allData?.pages.length === +allData?.currentPage
           }"
         >
           <button
-            [disabled]="allData.pages.length === +allData.currentPage"
+            [disabled]="allData?.pages.length === +allData?.currentPage"
             class="page-link"
-            (click)="getAllHotels(+allData.currentPage + 1)"
+            (click)="getAllHotels(+allData?.currentPage + 1)"
           >
             Next
           </button>

@@ -43,12 +43,7 @@ export class HotelCardComponent {
     });
   }
 
-  hotelDetaild(id: any) {
-    this.service.hotelDetails(id).subscribe((res: any) => {
-      this.hotelData = res;
-      console.log(this.hotelData);
-    });
-  }
+
 
   showMap() {
     let dialogRef = this.dialog.open(MapComponent, {

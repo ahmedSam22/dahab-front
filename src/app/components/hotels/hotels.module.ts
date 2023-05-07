@@ -11,10 +11,10 @@ import {MatCardModule} from '@angular/material/card';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { HotelCardComponent } from './hotel-card/hotel-card.component';
-import { HotelBodyComponent } from './hotel-body/hotel-body.component';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatDialogModule} from '@angular/material/dialog';
+import { HotelDataComponent } from './hotel-data/hotel-data.component';
 
 
 
@@ -25,7 +25,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     AddHotelComponent,
     SideNavComponent,
     HotelCardComponent,
-    HotelBodyComponent
+    HotelDataComponent
   ],
   imports: [
     CommonModule,
