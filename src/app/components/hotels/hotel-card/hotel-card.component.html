@@ -3,7 +3,7 @@
 <div class="card">
   <div class="row">
     <div class="card__carousel col-md-3 col-12">
-      <div id="carouselExample" class="carousel slide" data-bs-touch="true">
+      <div [attr.id]="'i'+id" class="carousel slide" data-bs-touch="true">
         <div class="carousel-inner h-100">
           <div class="carousel-item active h-100">
             <img
@@ -30,7 +30,7 @@
         <button
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExample"
+          [attr.data-bs-target]="'#i'+id"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -39,9 +39,10 @@
         <button
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExample"
+          [attr.data-bs-target]="'#i'+id"
           data-bs-slide="next"
         >
+        +
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
