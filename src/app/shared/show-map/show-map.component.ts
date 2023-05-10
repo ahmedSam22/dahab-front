@@ -20,6 +20,7 @@ export class ShowMapComponent {
   ngOnInit() {
 
     mapboxgl.accessToken = environment.mapbox.accessToken;
+    // mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
     this.map = new mapboxgl.Map({
       container: 'map',
       style: this.style,
