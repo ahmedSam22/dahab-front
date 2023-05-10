@@ -5,6 +5,7 @@ import { HomeComponent } from './components/layout/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HotelsComponent } from './components/hotels/hotels/hotels.component';
+import { HotelsLayoutComponent } from './components/hotels/hotels-layout/hotels-layout.component';
 
 const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./components/auth/auth.module').then(m => m.AuthModule)},
@@ -29,7 +30,14 @@ const routes: Routes = [
     
   ]},
 
-  {path : 'hotels' ,canActivate:[AuthGuard], loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
+
+  {path : 'hotels' ,component :HotelsLayoutComponent,canActivate:[AuthGuard], children:[
+    { path: '', loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
+    
+  ]},
+
+
+  // {path : 'hotels' ,canActivate:[AuthGuard], loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
 
 
 

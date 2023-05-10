@@ -1,8 +1,36 @@
-<section>
-    
+<section class="py-4">
+  <div class="container">
+    <div class="gallery--section">
+      <app-gallery></app-gallery>
+    </div>
+  </div>
+</section>
+
+<section class="py-4">
+  <div class="container">
+    <div class="description--section">
+      <div class="row">
+        <div class="col-6">
+          <p>
+            {{ hotelData?.description }}
+
+          </p>
+        </div>
+        <div class="col-6" *ngIf="hotelData">
+          <app-show-map
+            [outlat]="hotelData?.location.lat"
+            [outlng]="hotelData?.location.lng"
+          ></app-show-map>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
+<section class="py-4">
+    <div class="container">
 
-
-{{hotelData?.data| json}}
+    </div>
+</section>
+<!-- {{hotelData?.data| json}} -->

@@ -20,7 +20,7 @@ export class HotelDataComponent {
 
     hotelDetaild(id: any) {
       this.service.hotelDetails(id).subscribe((res: any) => {
-        this.hotelData = res;
+        this.hotelData = res.data;
         console.log(this.hotelData);
       });
     }

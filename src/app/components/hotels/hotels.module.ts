@@ -15,17 +15,24 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HotelDataComponent } from './hotel-data/hotel-data.component';
-
+import { GalleryModule } from  'ng-gallery';
+import { GalleryComponent } from 'src/app/shared/gallery/gallery.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { HotelsLayoutComponent } from './hotels-layout/hotels-layout.component';
+import { ShowMapComponent } from 'src/app/shared/show-map/show-map.component';
 
 
 @NgModule({
   declarations: [
     HotelsComponent,
-    MapComponent,
     AddHotelComponent,
     SideNavComponent,
     HotelCardComponent,
-    HotelDataComponent
+    HotelDataComponent,
+    GalleryComponent,
+    HotelsLayoutComponent,
+    MapComponent,
+    ShowMapComponent
   ],
   imports: [
     CommonModule,
@@ -37,8 +44,9 @@ import { HotelDataComponent } from './hotel-data/hotel-data.component';
     MatSidenavModule,
     MatChipsModule,
     MatSliderModule,
-    MatDialogModule
-
+    MatDialogModule,
+    GalleryModule,
+    SharedModule
 
   ]
 })
