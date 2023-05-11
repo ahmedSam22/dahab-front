@@ -21,6 +21,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { HotelsLayoutComponent } from './hotels-layout/hotels-layout.component';
 import { ShowMapComponent } from 'src/app/shared/show-map/show-map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { AddReviewComponent } from './add-review/add-review.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     GalleryComponent,
     HotelsLayoutComponent,
     MapComponent,
-    ShowMapComponent
+    ShowMapComponent,
+    AddReviewComponent
   ],
   imports: [
     CommonModule,
