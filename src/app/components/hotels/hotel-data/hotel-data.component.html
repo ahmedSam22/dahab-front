@@ -17,9 +17,10 @@
         </div>
         <div class="col-md-6" *ngIf="hotelData">
           <span>
-            <h4 class="text-primary d-inline">~{{hotelData?.distance}}</h4> KM from Center
+            <h4 class="text-primary d-inline">~{{ hotelData?.distance }}</h4>
+            KM from Center
           </span>
-          
+
           <app-show-map
             [outlat]="hotelData?.location.lat"
             [outlng]="hotelData?.location.lng"
@@ -35,26 +36,34 @@
     <div class="benefits-section col-md-6">
       <h3 class="text-primary">Most popular facilities</h3>
       <div class="d-flex gap-4 flex-wrap">
-        <span *ngIf="hotelData?.wifi"> <i class="fa-solid fa-wifi text-primary"></i> Free Wifi </span>
+        <span *ngIf="hotelData?.wifi">
+          <i class="fa-solid fa-wifi text-primary"></i> Free Wifi
+        </span>
         <span *ngIf="hotelData?.pool">
           <i class="fa-solid fa-person-swimming text-primary"></i> Outdoor
           swimming pool
         </span>
-        <span *ngIf="hotelData?.pets"> <i class="fa-solid fa-paw text-primary"></i> Pets </span>
+        <span *ngIf="hotelData?.pets">
+          <i class="fa-solid fa-paw text-primary"></i> Pets
+        </span>
         <span *ngIf="hotelData?.parking">
           <i class="fa-solid fa-square-parking text-primary"></i> Free Parking
         </span>
         <span *ngIf="hotelData?.restaurant">
           <i class="fa-solid fa-utensils text-primary"></i> Restaurant
         </span>
-        <span *ngIf="hotelData?.bar"> <i class="fa-solid fa-wine-glass text-primary"></i> Bar </span>
+        <span *ngIf="hotelData?.bar">
+          <i class="fa-solid fa-wine-glass text-primary"></i> Bar
+        </span>
         <span *ngIf="hotelData?.bikeRent">
           <i class="fa-solid fa-person-biking text-primary"></i> Bike Rent
         </span>
         <span *ngIf="hotelData?.trips">
           <i class="fa-solid fa-suitcase-rolling text-primary"></i> Trips
         </span>
-        <span *ngIf="hotelData?.roof"> <i class="fa-solid fa-people-roof text-primary"></i> Roof </span>
+        <span *ngIf="hotelData?.roof">
+          <i class="fa-solid fa-people-roof text-primary"></i> Roof
+        </span>
       </div>
     </div>
   </div>
@@ -75,18 +84,25 @@
         </thead>
         <tbody>
           <tr *ngFor="let price of hotelData?.price">
-            <td > {{price.size}} </td>
-            <td>{{price.desc || 'no Description Found'}}</td>
-            <td >
-              <div class="d-flex flex-wrap gap-md-5 ">
-                <span *ngIf="price.ac"> <i class="fa-regular fa-snowflake text-primary"></i> AC</span>
-                <span *ngIf="price.fridge"> <i class="fa-solid fa-temperature-arrow-down text-primary"></i>Fridge</span>
-                <span *ngIf="price.insideBathroom"> <i class="fa-solid fa-bath text-primary"></i>Inside Bathroom</span>
+            <td>{{ price.size }}</td>
+            <td>{{ price.desc || "no Description Found" }}</td>
+            <td>
+              <div class="d-flex flex-wrap gap-md-5">
+                <span *ngIf="price.ac">
+                  <i class="fa-regular fa-snowflake text-primary"></i> AC</span
+                >
+                <span *ngIf="price.fridge">
+                  <i class="fa-solid fa-temperature-arrow-down text-primary"></i
+                  >Fridge</span
+                >
+                <span *ngIf="price.insideBathroom">
+                  <i class="fa-solid fa-bath text-primary"></i>Inside
+                  Bathroom</span
+                >
               </div>
             </td>
-            <td>{{price.price}}</td>
+            <td>{{ price.price }}</td>
           </tr>
-
         </tbody>
       </table>
     </div>
@@ -96,10 +112,38 @@
 <section class="py-4">
   <div class="container">
     <div class="reviews-section">
-      <div class="d-flex justify-content-between"><h3 class="text-primary">Review</h3>   <button class="btn btn-link"  [routerLink]="['/hotels/reviews', id]">show All</button></div>
-      
+      <div class="d-flex justify-content-between">
+        <h3 class="text-primary">Review</h3>
+        <button class="btn btn-link" [routerLink]="['/hotels/reviews', id]">
+          show All
+        </button>
+      </div>
+
       <div class="d-flex flex-column review--section">
-        <div class="review--card" *ngFor="let review of reviews">
+        <owl-carousel-o [options]="customOptions" style="display: flex;gap: 60px;">
+          <ng-template
+         
+          carouselSlide
+            *ngFor="let review of reviews"
+          >
+          <div class="review--card">
+                <div class="d-flex justify-content-between">
+              <h3 class="review--card__name">{{ review.author.name }}</h3>
+              <span>
+                <i class="fa-solid fa-star" style="color: #d5ac15"></i>
+                {{ review.rate }}
+              </span>
+            </div>
+            <div>
+              <p>{{ review.text }}</p>
+            </div>
+          </div>
+        
+            </ng-template
+          >
+        </owl-carousel-o>
+
+        <!-- <div class="review--card" *ngFor="let review of reviews">
           <div class="d-flex justify-content-between">
             <h3 class="review--card__name">{{review.author.name}}</h3>
             <span>
@@ -110,15 +154,17 @@
           <div>
             <p>{{review.text}}</p>
           </div>
-        </div>
+        </div> -->
 
-
-          <button class="btn btn-outline-primary w-fit-content align-self-end" (click)="addReview()">Add Review</button>
+        <button
+          class="btn btn-outline-primary w-fit-content align-self-end"
+          (click)="addReview()"
+        >
+          Add Review
+        </button>
       </div>
-
     </div>
   </div>
 </section>
-
 
 <!-- {{hotelData?.data| json}} -->

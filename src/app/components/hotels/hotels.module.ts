@@ -1,3 +1,4 @@
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MapComponent } from './../../shared/map/map.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { NgModule } from '@angular/core';
@@ -52,7 +53,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     MatSliderModule,
     MatDialogModule,
     GalleryModule,
-    SharedModule
+    SharedModule,
+    CarouselModule
 
   ]
 })
