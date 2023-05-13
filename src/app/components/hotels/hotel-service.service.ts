@@ -50,7 +50,7 @@ addReview(body:any){
 }
 
 
-hotelReviews(id:any){
-  return this.http.get(`${environment.baseURL}/reviews/gethotel?hotel=${id}`)
+hotelReviews(id:any,page = 1){
+  return this.http.get(`${environment.baseURL}/reviews/gethotel?hotel=${id}&page=${page}`)
 }
 }

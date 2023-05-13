@@ -17,13 +17,13 @@ export class ReviewsComponent {
     }
 
       ngOnInit(){
-        this.hotelDetaild(this.id)
+        this.hotelReviews(this.id)
       }
 
 
-    hotelDetaild(id: any) {
-      this.service.hotelReviews(id).subscribe((res: any) => {
-        this.reviews = res.data
+    hotelReviews(id: any , page = 1) {
+      this.service.hotelReviews(id , page).subscribe((res: any) => {
+        this.reviews = res
         console.log(this.reviews , "dkaoji");
         
       });
@@ -39,6 +39,6 @@ export class ReviewsComponent {
         height: "450px",
         width: "600px",
       });
-      dialogRef.afterClosed().subscribe(e=>this.hotelDetaild(this.id))
+      dialogRef.afterClosed().subscribe(e=>this.hotelReviews(this.id))
     }
 }

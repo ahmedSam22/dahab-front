@@ -8,3 +8,25 @@
 }
 
 }
+
+
+.pagination--section{
+    ul{
+      li{
+        button{
+          background-color: #0000008c;
+          cursor: pointer;
+        }
+        a{
+          background-color: #0000008c;
+          cursor: pointer;
+  
+        }
+        .active{
+          background-color: #0535c75b ;
+        }
+      }
+    }
+  }
+  
+  
