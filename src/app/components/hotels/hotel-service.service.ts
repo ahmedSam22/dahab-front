@@ -44,4 +44,13 @@ hotelFavourite(id:any){
   return this.http.get(`${environment.baseURL}/hotels/favourite?id=${id}`)
 
 }
+
+addReview(body:any){
+  return this.http.post(`${environment.baseURL}/reviews/add` , body)
+}
+
+
+hotelReviews(id:any){
+  return this.http.get(`${environment.baseURL}/reviews/gethotel?hotel=${id}`)
+}
 }

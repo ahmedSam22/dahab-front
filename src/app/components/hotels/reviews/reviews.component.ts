@@ -1,33 +1,34 @@
-import { Component, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { HotelServiceService } from '../hotel-service.service';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router, ActivatedRoute } from '@angular/router';
+import { HotelServiceService } from '../hotel-service.service';
 import { AddReviewComponent } from '../add-review/add-review.component';
 
 @Component({
-  selector: 'app-hotel-data',
-  templateUrl: './hotel-data.component.html',
-  styleUrls: ['./hotel-data.component.scss']
+  selector: 'app-reviews',
+  templateUrl: './reviews.component.html',
+  styleUrls: ['./reviews.component.scss']
 })
-export class HotelDataComponent {
-  
-  hotelData:any;
+export class ReviewsComponent {
   reviews:any;
   id:any;
   constructor(private service:HotelServiceService,private router:Router,private active:ActivatedRoute , private dialog : MatDialog){
     this.id=this.active.snapshot.paramMap.get("id");
-    this.hotelDetaild(this.id)
     }
 
+      ngOnInit(){
+        this.hotelDetaild(this.id)
+      }
 
 
     hotelDetaild(id: any) {
-      this.service.hotelDetails(id).subscribe((res: any) => {
-        this.hotelData = res.data;
-        this.reviews = res.reviews.slice(1,4);
-        console.log(this.hotelData);
+      this.service.hotelReviews(id).subscribe((res: any) => {
+        this.reviews = res.data
+        console.log(this.reviews , "dkaoji");
+        
       });
     }
+
 
 
     addReview() {
@@ -40,5 +41,4 @@ export class HotelDataComponent {
       });
       dialogRef.afterClosed().subscribe(e=>this.hotelDetaild(this.id))
     }
-
 }
