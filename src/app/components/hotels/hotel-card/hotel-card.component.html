@@ -1,0 +1,88 @@
+
+
+<div class="card">
+  <div class="row">
+    <div class="card__carousel col-md-3 col-12">
+      <div [attr.id]="'i'+id" class="carousel slide" data-bs-touch="true">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img
+              src="../../../../assets/images/auth.jpg"
+              class="d-block w-100 h-100"
+              alt="../../../../assets/images/auth.jpg"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../../../../assets/images/demo.jpg"
+              class="d-block w-100"
+              alt="../../../../assets/images/auth.jpg"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../../../../assets/images/auth.jpg"
+              class="d-block w-100"
+              alt="../../../../assets/images/auth.jpg"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          [attr.data-bs-target]="'#i'+id"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          [attr.data-bs-target]="'#i'+id"
+          data-bs-slide="next"
+        >
+        +
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-6 col-12 card__details ">
+      <div class="d-flex flex-column p-3">
+        <span class="d-flex gap-3 align-items-center">  
+          <h3 class="card__details__name">{{name}}</h3>
+          <span class="badge text-bg-info ">{{type}}</span>
+
+
+        </span>
+      
+        <button (click)="showMap()" class="btn btn-link w-fit-content p-0"><i class="fas fa-map-marker-alt"></i> Show On Map</button>
+        <button class="btn btn-link w-fit-content p-0"><small>(reviews if founded)</small></button>
+        <span>{{dist}} <small class="text-muted fs-6">KM from center</small> </span>
+        <ul class="p-0 pt-1">
+          <li><i class="me-1" [class]="breakfast ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'" ></i>Break Fast</li>
+          <li><i class="me-1" [class]="wifi ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'"></i>Wifi</li>
+          <li><i class="me-1" [class]="pets ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'"></i>Pets </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-3 col-12 card__price">
+      <button class="card__price__like" (click)="hotelFavourite()">
+        <i [class]=" favourite  ? 'fa-solid fa-heart fs-4' : 'fa-regular fa-heart fs-4'"></i>
+    </button>
+      <div class="d-flex flex-column justify-content-end p-3">
+     
+      <span>
+           <h3 class="card__price__price d-inline">
+          312$</h3>/ <small>per night</small>
+      </span>
+
+      <button class="btn-outline-primary btn mt-2" [routerLink]="[id]">Show more</button>
+     
+
+      </div>
+    </div>
+  </div>
+</div>

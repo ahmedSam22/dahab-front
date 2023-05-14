@@ -1,0 +1,25 @@
+.text--container{
+
+}
+
+.img--container{
+    overflow: hidden;
+
+    &__rotate{
+        transform: rotate(60deg);
+        position: relative;
+        img{
+            filter: grayscale(.4);
+            transition: all 500ms ease-in-out; 
+            z-index: 1;
+
+            &:hover{
+                transform: rotate(-60deg) scale(1.4);
+                // transition: all 500ms ease-in-out; 
+                filter: grayscale(0);
+                z-index: 2;
+
+            }
+        }
+    }
+}

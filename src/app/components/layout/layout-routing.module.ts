@@ -1,11 +1,9 @@
-import { HotelsComponent } from './../hotels/hotels/hotels.component';
-import { LoginComponent } from './../auth/login/login.component';
-import { HomeComponent } from './home/home.component';
+import { MapComponent } from './../../shared/map/map.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path : '' , component : HotelsComponent},
+  {path : '' , component : MapComponent},
 
 
 ];

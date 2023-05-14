@@ -1,0 +1,76 @@
+.filter--section{
+background: #0000008c;
+mat-slider {
+  width: 300px;
+  max-width: 100%;
+}
+}
+
+
+*{
+  transition: all 500ms ease-in-out; 
+
+}
+
+
+@media (max-width: 768px)  {
+  .show{
+    display: none;
+  }
+
+}
+
+.card--section{
+  padding: 10px;
+  min-height: 70%;
+  max-height: 70%;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: auto;
+  &__container{
+overflow: hidden;
+  }
+
+
+  }
+
+.pagination--section{
+  ul{
+    li{
+      button{
+        background-color: #0000008c;
+        cursor: pointer;
+      }
+      a{
+        background-color: #0000008c;
+        cursor: pointer;
+
+      }
+      .active{
+        background-color: #0535c75b ;
+      }
+    }
+  }
+}
+
+
+
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+  // .example {
+  //   -ms-overflow-style: none;  /* IE and Edge */
+  //   scrollbar-width: none;  /* Firefox */
+  // }
+
+
+  body{
+    background-image: url("../../../../assets/images/hotelsbg.jpg");
+    min-height: 100%;
+    background-size: cover;
+  }
+
+  mat-slider {
+    width: 300px;
+  }

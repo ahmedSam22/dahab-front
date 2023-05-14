@@ -1,0 +1,27 @@
+.match-parent {
+    min-width: 100%;
+    min-height: 300px !important;
+  }
+
+  .relative{
+    min-height: 300px !important;
+    position: relative;
+  }
+  .absolute{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  button{
+background-color: rgba(0, 0, 0, 0.192);  
+&:hover{
+background-color: rgba(0, 0, 0, 0.514);  
+
+}
+  }
+
+
+  ::ng-deep.mapboxgl-ctrl-bottom-left, ::ng-deep.mapboxgl-ctrl-bottom-right{
+    display: none !important;
+  }

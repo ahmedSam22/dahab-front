@@ -1,0 +1,18 @@
+@media (max-width: 768px)  {
+    .details{
+        display: none;
+    }
+
+  }
+
+  .review--section{
+    // height: 800px;
+    // overflow-y: auto;
+    .review--card{
+      background-color: #000000 !important;
+      margin-right: 10px;
+      padding: 20px;
+      border-radius: 8px;
+
+    }
+  }

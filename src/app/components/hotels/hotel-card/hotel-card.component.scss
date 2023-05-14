@@ -1,0 +1,45 @@
+.card{
+  background-color: #0000008c;
+
+  &__carousel{
+    position: relative !important;
+    .carousel-control-prev ,.carousel-control-next{
+      background-color: rgb(96 100 100 / 49%);
+    }
+  }
+  &__details{
+    ul{
+      list-style:none
+    }
+    .badge{
+      height: fit-content;
+    }
+  }
+  &__price{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 768px)  {
+      justify-content: start  ;
+
+    }
+    &__like{
+      background: inherit;
+      width: fit-content;
+      border: 0;
+      // align-self: flex-end;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      color: #0534c7;
+    }
+  }
+}
+
+.carousel{
+height: 100% !important;
+}
+
+*{
+  background-image: url('/src/assets/images/hotelsbg.jpg');
+}

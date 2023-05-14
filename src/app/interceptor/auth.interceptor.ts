@@ -12,45 +12,45 @@ import { environment } from 'environments/environment';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  private token:any
-
+  
   constructor(private currentUserService: CurrentuserService,private route: ActivatedRoute) {}
-
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  
+  private token:any
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const currentUser = this.currentUserService.currentUserValue;
-    var isLoggedIn = currentUser && currentUser?.access_token;
+    const isLoggedIn = currentUser && currentUser;
     const isApiUrl = request.url.startsWith(environment.endpoint);
-    var token = currentUser?.token;
-    if(this.token != null){
-      request = request.clone({
-        setHeaders: {
-            Accept: "application/json",
-            "Access-Control-Allow-Origin": "*",
-            Authorization: `Bearer ${this.token}`,
-            // lang:JSON.parse(localStorage.getItem())
-            // lang:this.lang
-        },
-    });
-    return next.handle(request);
-      // token = this.token
-      // isLoggedIn = true
-    }
-    if (isLoggedIn && isApiUrl ) {
-      //
-        try {
-          request = request.clone({
+   console.log("<---------interceptor----->")
+    if (isLoggedIn && isApiUrl) {
+        console.log(currentUser)
+        request = request.clone({
             setHeaders: {
                 Accept: "application/json",
                 "Access-Control-Allow-Origin": "*",
-                Authorization: `Bearer ${token}`,
-                // Authorization: `Bearer ${token}`
-                // lang:this.lang
+                Authorization: `Bearer ${currentUser}`,
             },
+            // setParams :{
+            //     "language_symbol":localStorage.getItem('currentLang') || 'en',
+            // }
         });
-        } catch (error) {
+    }else if ( isApiUrl) {
+        console.log(currentUser)
+        request = request.clone({
+            setHeaders: {
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
 
-        }
+                Authorization: `Bearer ${currentUser.data.access_token}`
+            },
+            // setParams :{
+            //     "language_symbol":"ar"
+            // }
+        });
     }
+    console.log("req: " , request);
     return next.handle(request);
-}}
+}
+
+
+}
   

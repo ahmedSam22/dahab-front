@@ -1,10 +1,15 @@
-import { LoginComponent } from './../auth/login/login.component';
-import { HotelsComponent } from './hotels/hotels.component';
+import { AddHotelComponent } from './add-hotel/add-hotel.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HotelsComponent } from './hotels/hotels.component';
+import { HotelDataComponent } from './hotel-data/hotel-data.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 const routes: Routes = [
   { path:"" , component:HotelsComponent},
+  { path:"add" , component:AddHotelComponent},
+  { path:"reviews/:id" , component:ReviewsComponent},
+  { path:":id" , component:HotelDataComponent},
   
 ];
 

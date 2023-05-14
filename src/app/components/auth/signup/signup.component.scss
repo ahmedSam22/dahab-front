@@ -6,7 +6,7 @@
     rgb(230, 228, 228) 40%,
     rgba(255, 255, 255, 1) 100%
   );
-  height: fill-available;
+  height: stretch;
   @media screen and (max-width: 678px) {
     background: linear-gradient(
       to right,
@@ -42,10 +42,10 @@
     }
 
     &__right--side {
-      // max-height: -webkit-fill-available;
+      // max-height: -webkit-stretch;
       // width: 100%;
       // overflow-y: scroll;
-      // max-height: -webkit-fill-available;
+      // max-height: -webkit-stretch;
       form {
         max-height: 70%;
         width: 80%;
