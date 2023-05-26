@@ -1,20 +1,19 @@
-import { Component, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { HotelServiceService } from '../hotel-service.service';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AddReviewComponent } from '../add-review/add-review.component';
-  import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Router, ActivatedRoute } from '@angular/router';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ActivitiesService } from '../activities.service';
 
 @Component({
-  selector: 'app-hotel-data',
-  templateUrl: './hotel-data.component.html',
-  styleUrls: ['./hotel-data.component.scss']
+  selector: 'app-office-details',
+  templateUrl: './office-details.component.html',
+  styleUrls: ['./office-details.component.scss']
 })
-export class HotelDataComponent {
+export class OfficeDetailsComponent {
   hotelData:any;
   reviews:any;
   id:any;
-  constructor(private service:HotelServiceService,private router:Router,private active:ActivatedRoute , private dialog : MatDialog){
+  constructor(private service:ActivitiesService,private router:Router,private active:ActivatedRoute , private dialog : MatDialog){
     this.id=this.active.snapshot.paramMap.get("id");
     this.hotelDetaild(this.id)
     }
@@ -22,27 +21,30 @@ export class HotelDataComponent {
 
 
     hotelDetaild(id: any) {
-      this.service.hotelDetails(id).subscribe((res: any) => {
+      this.service.officeDetails(id).subscribe((res: any) => {
         this.hotelData = res.data;
+
         this.reviews = res.reviews.slice(-4).reverse();
+        console.log(this.hotelData);
+        
         console.log(this.reviews);
       });
     }
 
 
     addReview() {
-      let dialogRef = this.dialog.open(AddReviewComponent, {
-        data: {
-          hotel : this.id
-        },
-        height: "450px",
-        width: "600px",
-      });
-      dialogRef.afterClosed().subscribe(e=>this.hotelDetaild(this.id))
+      // let dialogRef = this.dialog.open(AddReviewComponent, {
+      //   data: {
+      //     hotel : this.id
+      //   },
+      //   height: "450px",
+      //   width: "600px",
+      // });
+      // dialogRef.afterClosed().subscribe(e=>this.hotelDetaild(this.id))
     }
 
 
-    customOptions: OwlOptions = {
+    customOptions2: OwlOptions = {
       loop: true,
       mouseDrag: false,
       touchDrag: false,
@@ -71,6 +73,5 @@ export class HotelDataComponent {
       },
       nav: true,
     };
-
 
 }

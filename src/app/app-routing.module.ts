@@ -1,3 +1,4 @@
+import { ActivitiesModule } from './components/activities/activities.module';
 import { HotelsModule } from './components/hotels/hotels.module';
 import { LandingPageComponent } from './components/landing-page/landing-page/landing-page.component';
 import { AuthGuard } from './guards/auth.guard';
@@ -6,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HotelsComponent } from './components/hotels/hotels/hotels.component';
 import { HotelsLayoutComponent } from './components/hotels/hotels-layout/hotels-layout.component';
+import { ActivitiesLayoutComponent } from './components/activities/activities-layout/activities-layout.component';
 
 const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./components/auth/auth.module').then(m => m.AuthModule)},
@@ -36,6 +38,10 @@ const routes: Routes = [
     
   ]},
 
+  {path : 'offices' ,component :ActivitiesLayoutComponent,canActivate:[AuthGuard], children:[
+    { path: '', loadChildren: () => import('./components/activities/activities.module').then(m => m.ActivitiesModule) },
+    
+  ]},
 
   // {path : 'hotels' ,canActivate:[AuthGuard], loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
 
