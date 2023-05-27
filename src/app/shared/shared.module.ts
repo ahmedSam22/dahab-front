@@ -5,8 +5,9 @@ import { RouterModule } from '@angular/router';
 import { MapComponent } from './../shared/map/map.component';
 import { GalleryComponent } from 'src/app/shared/gallery/gallery.component';
 import { GalleryModule } from  'ng-gallery';
-import { ShowMapComponent } from './show-map/show-map.component';
+// import { ShowMapComponent } from './show-map/show-map.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ShowMapComponent } from 'src/app/shared/show-map/show-map.component';
 
 
 
@@ -14,6 +15,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   declarations: [
     NavBarComponent,
     GalleryComponent,
+    ShowMapComponent
 
   ],
   imports: [
@@ -26,6 +28,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   exports: [
     NavBarComponent,
     GalleryComponent,
+    ShowMapComponent
   ]
 })
 export class SharedModule { }

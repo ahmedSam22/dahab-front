@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router, ActivatedRoute } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ActivitiesService } from '../activities.service';
+import { AddReviewComponent } from '../add-review/add-review.component';
 
 @Component({
   selector: 'app-office-details',
@@ -10,37 +11,40 @@ import { ActivitiesService } from '../activities.service';
   styleUrls: ['./office-details.component.scss']
 })
 export class OfficeDetailsComponent {
-  hotelData:any;
+  officeData:any;
   reviews:any;
+  activities:any;
   id:any;
   constructor(private service:ActivitiesService,private router:Router,private active:ActivatedRoute , private dialog : MatDialog){
     this.id=this.active.snapshot.paramMap.get("id");
-    this.hotelDetaild(this.id)
+    this.officeDetaild(this.id)
     }
 
 
 
-    hotelDetaild(id: any) {
+    officeDetaild(id: any) {
       this.service.officeDetails(id).subscribe((res: any) => {
-        this.hotelData = res.data;
+        this.officeData = res.data;
+        this.activities = res.activities;
 
         this.reviews = res.reviews.slice(-4).reverse();
-        console.log(this.hotelData);
+        console.log(this.officeData , "data ");
+        console.log(this.activities , "activities");
         
-        console.log(this.reviews);
+        console.log(this.reviews , "reviews");
       });
     }
 
 
     addReview() {
-      // let dialogRef = this.dialog.open(AddReviewComponent, {
-      //   data: {
-      //     hotel : this.id
-      //   },
-      //   height: "450px",
-      //   width: "600px",
-      // });
-      // dialogRef.afterClosed().subscribe(e=>this.hotelDetaild(this.id))
+      let dialogRef = this.dialog.open(AddReviewComponent, {
+        data: {
+          hotel : this.id
+        },
+        height: "450px",
+        width: "600px",
+      });
+      dialogRef.afterClosed().subscribe(e=>this.officeDetaild(this.id))
     }
 
 

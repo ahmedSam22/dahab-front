@@ -1,0 +1,116 @@
+<section class="py-4">
+    <div class="container">
+      <div class="gallery--section">
+        <app-gallery></app-gallery>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-4">
+    <div class="container">
+      <div class="description--section">
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              {{ officeData?.description }}
+            </p>
+          </div>
+          <div class="col-md-6" *ngIf="officeData">
+            <span>
+              <h4 class="text-primary d-inline">~{{ officeData?.distance }}</h4>
+              KM from Center
+            </span>
+  
+            <app-show-map
+              [outlat]="officeData?.location.lat"
+              [outlng]="officeData?.location.lng"
+            ></app-show-map>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-4">
+    <div class="container">
+      <div class="benefits-section col-md-6">
+        <h3 class="text-primary">Specification</h3>
+        <ul class="p-0 pt-1">
+            <li><i class="me-1" [class]="officeData?.outside ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'" ></i>Outside Trips</li>
+            <li><i class="me-1" [class]="officeData?.customise ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'"></i>Customise Trips</li>
+            <!-- <li><i class="me-1" [class]="pets ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'"></i>Pets </li> -->
+            <li><i class="me-1 fa-solid fa-phone-flip text-success"></i>{{officeData?.contactNumber || 'Not Found'}}</li>
+          </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-4">
+    <div class="container">
+      <div class="price-section">
+        <h3 class="text-primary">Activities</h3>
+
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-4">
+    <div class="container">
+      <div class="reviews-section">
+        <div class="d-flex justify-content-between">
+          <h3 class="text-primary">Review</h3>
+          <!-- <button class="btn btn-link" [routerLink]="['/hotels/reviews', id]">
+            show All
+          </button> -->
+        </div>
+  
+        <div class="d-flex flex-column review--section">
+           <owl-carousel-o [options]="customOptions2" style="display: flex;gap: 60px;">
+            <ng-template
+           
+            carouselSlide
+              *ngFor="let review of reviews"
+            >
+            <div class="review--card">
+                  <div class="d-flex justify-content-between">
+                <h3 class="review--card__name">{{ review.author.name }}</h3>
+                <span>
+                  <i class="fa-solid fa-star" style="color: #d5ac15"></i>
+                  {{ review.rate }}
+                </span>
+              </div>
+              <div>
+                <p>{{ review.text }}</p>
+              </div>
+            </div>
+          
+              </ng-template
+            >
+          </owl-carousel-o>
+  
+          <!-- <div class="review--card" *ngFor="let review of reviews">
+            <div class="d-flex justify-content-between">
+              <h3 class="review--card__name">{{review.author.name}}</h3>
+              <span>
+                <i class="fa-solid fa-star" style="color: #d5ac15;"></i>
+                {{review.rate}}
+              </span>
+            </div>
+            <div>
+              <p>{{review.text}}</p>
+            </div>
+          </div> -->
+  
+          <button
+            class="btn btn-outline-primary w-fit-content align-self-end"
+            (click)="addReview()"
+          >
+            Add Review
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- {{officeData?.data| json}} -->
+  
