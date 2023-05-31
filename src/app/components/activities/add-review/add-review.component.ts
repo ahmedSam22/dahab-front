@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ActivitiesService } from '../activities.service';
-// import { HotelServiceService } from '../hotel-service.service';
+// import { officeServiceService } from '../office-service.service';
 
 @Component({
   selector: 'app-add-review',
@@ -12,7 +12,7 @@ export class AddReviewComponent {
 
 
   constructor(private dialog:MatDialogRef<AddReviewComponent>,@Inject(MAT_DIALOG_DATA) public data:any, private service:ActivitiesService){
-    console.log(data.hotel);
+    console.log(data.office);
     
   }
   emoji:any= [
@@ -35,7 +35,7 @@ testValue(e:any){
 
 addReview(){
   var query:any = new Object();
-  query.hotel = this.data.hotel
+  query.office = this.data.office
   query.rate = this.rate
   query.text = this.comment
   return this.service.addReview(query).subscribe(async (res:any)=>{

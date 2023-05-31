@@ -11,6 +11,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { OfficeDetailsComponent } from './office-details/office-details.component';
 import { AddReviewComponent } from './add-review/add-review.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ActivityDetailsComponent } from './activity-details/activity-details.component';
+import { ViewImageComponent } from './view-image/view-image.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ OfficeCardComponent,
 OfficesComponent,
 OfficeDetailsComponent,
 AddReviewComponent,
-ActivitiesLayoutComponent ],
+ActivitiesLayoutComponent,
+ActivityDetailsComponent,
+ViewImageComponent,
+ReviewsComponent ],
   imports: [
     CommonModule,
     ActivitiesRoutingModule,

@@ -1,0 +1,83 @@
+<body>
+  <section class="py-4">
+    <div class="container">
+      <div class="price-section">
+        <h3 class="text-primary">Activity</h3>
+      </div>
+
+      <div class="d-flex flex-column activity--section">
+        <owl-carousel-o
+          [options]="customOptions1"
+          style="display: flex; gap: 60px"
+        >
+          <ng-template carouselSlide>
+            <img
+              (click)="viewImage(image.src)"
+              #image
+              src="assets/emoji/1.png"
+              alt=""
+              srcset=""
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              (click)="viewImage(image.src)"
+              #image
+              src="assets/emoji/1.png"
+              alt=""
+              srcset=""
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              (click)="viewImage(image.src)"
+              #image
+              src="assets/emoji/1.png"
+              alt=""
+              srcset=""
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              (click)="viewImage(image.src)"
+              #image
+              src="assets/emoji/1.png"
+              alt=""
+              srcset=""
+            />
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-4">
+    <div class="container">
+      <h4 class="text-primary">{{ activity?.name }}</h4>
+      <p class="">
+        {{ activity?.description }}
+      </p>
+    </div>
+  </section>
+
+  <section class="py-4">
+    <div class="container">
+      <h4 class="text-primary">More Details</h4>
+      <div class="d-flex flex-column">
+        <span> From : {{ activity?.time.from }}</span>
+        <span> To : {{ activity?.time.to }}</span>
+        <span>children : {{activity?.adultonly ? 'allowed' : 'not allowed'}}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-4" *ngIf="activity?.price">
+    <div class="container">
+      <h4 class="text-primary">Price</h4>
+      <div class="d-flex flex-column">
+   <h3 class="text-primary">{{activity?.price}} EGP</h3>
+      </div>
+    </div>
+  </section>
+
+</body>

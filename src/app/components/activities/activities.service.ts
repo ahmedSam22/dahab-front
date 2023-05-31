@@ -26,7 +26,15 @@ addReview(body:any){
 }
 
 officeReviews(id:any,page = 1){
-  return this.http.get(`${environment.baseURL}/officesreviews/getactivity?activity=${id}&page=${page}`)
+  return this.http.get(`${environment.baseURL}/officesreviews/getoffice?office=${id}&page=${page}`)
 }
+
+
+
+activityDetails(id:any){
+  return this.http.get(`${environment.baseURL}/activities/getone?id=${id}`)
+
+}
+
 
 }

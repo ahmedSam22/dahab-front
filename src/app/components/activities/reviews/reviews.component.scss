@@ -1,0 +1,39 @@
+.review--section{
+
+    gap: 50px;
+    
+    .review--card{
+        
+        border-bottom: 1px solid blue;
+}
+.review--card{
+  background-color: #000000 !important;
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 8px;
+
+}
+
+}
+
+
+.pagination--section{
+    ul{
+      li{
+        button{
+          background-color: #0000008c;
+          cursor: pointer;
+        }
+        a{
+          background-color: #0000008c;
+          cursor: pointer;
+  
+        }
+        .active{
+          background-color: #0535c75b ;
+        }
+      }
+    }
+  }
+  
+  
