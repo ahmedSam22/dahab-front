@@ -1,0 +1,26 @@
+
+.pagination--section{
+    ul{
+      li{
+        button{
+          background-color: #0000008c;
+          cursor: pointer;
+        }
+        a{
+          background-color: #0000008c;
+          cursor: pointer;
+  
+        }
+        .active{
+          background-color: #0535c75b ;
+        }
+      }
+    }
+  }
+  
+    body{
+      background-image: url("../../../../assets/images/hotelsbg.jpg") !important;
+      min-height: 100%;
+      background-size: cover;
+    }
+  

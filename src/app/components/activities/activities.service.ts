@@ -37,4 +37,10 @@ activityDetails(id:any){
 }
 
 
+allActivities(page:any){
+  return this.http.get(`${environment.baseURL}/activities/get?page=${page}`)
+
+}
+
+
 }

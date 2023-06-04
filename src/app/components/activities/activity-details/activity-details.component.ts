@@ -13,8 +13,9 @@ import { ViewImageComponent } from '../view-image/view-image.component';
 export class ActivityDetailsComponent {
   activity:any;
 id:any;
-constructor(private service:ActivitiesService,private router:Router,private active:ActivatedRoute , private dialog : MatDialog,@Inject(MAT_DIALOG_DATA) public data:any){
+constructor(private service:ActivitiesService,private router:Router,private active:ActivatedRoute , private dialog : MatDialog){
   // this.id=this.active.snapshot.paramMap.get("id");
+  this.id=this.active.snapshot.paramMap.get("id");
 
 }
 
@@ -44,7 +45,7 @@ customOptions1: OwlOptions = {
         items: 3,
       },
       940: {
-        items: 4,
+        items: 3,
       },
     },
     nav: true,
@@ -52,7 +53,7 @@ customOptions1: OwlOptions = {
 
 
   ngOnInit(){
-  this.activityDetails(this.data.activity)
+  this.activityDetails(this.id)
   }
 
   viewImage(query:any) {

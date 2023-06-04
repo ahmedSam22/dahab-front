@@ -62,11 +62,37 @@
 
   <section class="py-4">
     <div class="container">
+      <h4 class="text-primary">Office Details</h4>
+      <div class="d-flex flex-column">
+        <span> Name : {{ activity?.office.name }}</span>
+        <span> Contact Number : {{ activity?.office.contactNumber }}</span>
+        <span
+        *ngIf="activity?.office.distance"
+          >Place :
+          {{ activity?.office.distance }}KM  From Center</span
+        >
+ 
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="py-4">
+    <div class="container">
       <h4 class="text-primary">More Details</h4>
       <div class="d-flex flex-column">
         <span> From : {{ activity?.time.from }}</span>
         <span> To : {{ activity?.time.to }}</span>
-        <span>children : {{activity?.adultonly ? 'allowed' : 'not allowed'}}</span>
+        <span
+          >children :
+          {{ activity?.adultonly ? "allowed" : "not allowed" }}</span
+        >
+        <span
+          >time :
+          <i class="fa-regular fa-sun text-warning" *ngIf="!activity?.night"></i>
+          <i class="fa-solid fa-moon text-warning" *ngIf="activity?.night"></i
+        ></span>
       </div>
     </div>
   </section>
@@ -75,9 +101,8 @@
     <div class="container">
       <h4 class="text-primary">Price</h4>
       <div class="d-flex flex-column">
-   <h3 class="text-primary">{{activity?.price}} EGP</h3>
+        <h3 class="text-primary">{{ activity?.price }} EGP</h3>
       </div>
     </div>
   </section>
-
 </body>

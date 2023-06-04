@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ActivityDetailsComponent } from './activity-details/activity-details.component';
 import { ViewImageComponent } from './view-image/view-image.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ActivitiesPageComponent } from './activities-page/activities-page.component';
+import { ActivityCardComponent } from './activity-card/activity-card.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ AddReviewComponent,
 ActivitiesLayoutComponent,
 ActivityDetailsComponent,
 ViewImageComponent,
-ReviewsComponent ],
+ReviewsComponent,
+ActivitiesPageComponent,
+ActivityCardComponent ],
   imports: [
     CommonModule,
     ActivitiesRoutingModule,
