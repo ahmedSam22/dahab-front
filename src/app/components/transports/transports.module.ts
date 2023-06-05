@@ -9,6 +9,8 @@ import { DriverDetailsComponent } from './driver-details/driver-details.componen
 import { DriverCardComponent } from './driver-card/driver-card.component';
 import { DriverReviewsComponent } from './driver-reviews/driver-reviews.component';
 import { AddReviewComponent } from './add-review/add-review.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -23,7 +25,10 @@ import { AddReviewComponent } from './add-review/add-review.component';
   imports: [
     CommonModule,
     TransportsRoutingModule,
-    SharedModule
+    SharedModule,
+    CarouselModule,
+    MatDialogModule,
+
   ]
 })
 export class TransportsModule { }

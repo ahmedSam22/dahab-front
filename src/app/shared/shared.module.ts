@@ -8,6 +8,7 @@ import { GalleryModule } from  'ng-gallery';
 // import { ShowMapComponent } from './show-map/show-map.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ShowMapComponent } from 'src/app/shared/show-map/show-map.component';
+import { ViewImageComponent } from '../components/activities/view-image/view-image.component';
 
 
 
@@ -15,7 +16,8 @@ import { ShowMapComponent } from 'src/app/shared/show-map/show-map.component';
   declarations: [
     NavBarComponent,
     GalleryComponent,
-    ShowMapComponent
+    ShowMapComponent,
+    ViewImageComponent
 
   ],
   imports: [
