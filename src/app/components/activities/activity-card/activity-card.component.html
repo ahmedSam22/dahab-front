@@ -1,0 +1,20 @@
+
+<div class="card" style="width: 100%;background-color: black;">
+    <img src="../../../../assets/images/demo.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text " > <span class="text-primary">{{office || "Not Found"}} </span></p>
+      <!-- <p class="card-text " *ngIf="!dist"> <span class="text-primary">{{dist}} </span>Location Not Found</p> -->
+      <ul class="p-0 pt-1">
+        <li>
+               <i class="fa-regular fa-sun text-warning" *ngIf="!night"></i>
+        <i class="fa-solid fa-moon text-warning" *ngIf="night"></i>
+        </li>
+     
+        <li>{{description}}</li>
+   
+
+      </ul>
+      <a href="#" class="btn btn-primary" [routerLink]="[id]">Go somewhere</a>
+    </div>
+  </div>

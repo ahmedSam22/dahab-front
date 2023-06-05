@@ -1,5 +1,5 @@
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { MapComponent } from './../../shared/map/map.component';
+// import { MapComponent } from './../../shared/map/map.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,11 +16,9 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HotelDataComponent } from './hotel-data/hotel-data.component';
-import { GalleryModule } from  'ng-gallery';
-import { GalleryComponent } from 'src/app/shared/gallery/gallery.component';
+// import { GalleryComponent } from 'src/app/shared/gallery/gallery.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HotelsLayoutComponent } from './hotels-layout/hotels-layout.component';
-import { ShowMapComponent } from 'src/app/shared/show-map/show-map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { AddReviewComponent } from './add-review/add-review.component';
 import { ReviewsComponent } from './reviews/reviews.component';
@@ -33,16 +31,16 @@ import { ReviewsComponent } from './reviews/reviews.component';
     SideNavComponent,
     HotelCardComponent,
     HotelDataComponent,
-    GalleryComponent,
     HotelsLayoutComponent,
-    MapComponent,
-    ShowMapComponent,
+    // MapComponent,
+    // ShowMapComponent,
     AddReviewComponent,
     ReviewsComponent
   ],
   imports: [
     CommonModule,
     HotelsRoutingModule,
+    SharedModule,
     NgxDropzoneModule,
     GoogleMapsModule,
     FormsModule,
@@ -52,8 +50,6 @@ import { ReviewsComponent } from './reviews/reviews.component';
     MatChipsModule,
     MatSliderModule,
     MatDialogModule,
-    GalleryModule,
-    SharedModule,
     CarouselModule
 
   ]

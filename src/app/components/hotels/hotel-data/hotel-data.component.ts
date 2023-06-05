@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HotelServiceService } from '../hotel-service.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AddReviewComponent } from '../add-review/add-review.component';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+  import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-hotel-data',
@@ -11,7 +11,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./hotel-data.component.scss']
 })
 export class HotelDataComponent {
-  
   hotelData:any;
   reviews:any;
   id:any;

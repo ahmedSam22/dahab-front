@@ -1,0 +1,23 @@
+body{
+    background-color: inherit;
+    min-height: 100%;
+}
+
+.owl-carousel .owl-item img{
+    width: 100px !important;
+    margin: auto !important;
+}
+.owl-carousel .owl-item{
+    width: 100px !important;
+}
+
+ng-template{
+    img{
+        width: 100px !important;
+        margin: auto !important; 
+    }
+}
+
+.online{
+    color: #25d366;
+}

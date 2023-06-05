@@ -1,0 +1,15 @@
+body{
+    background-color: #000000;
+    min-height: 100%;
+    position: relative;
+    button{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        opacity: .3;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+

@@ -1,0 +1,16 @@
+
+<div class="card" style="width: 100%;background-color: black;">
+    <img src="../../../../assets/images/demo.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text " *ngIf="dist"> <span class="text-primary">{{dist}} </span>KM From Center</p>
+      <p class="card-text " *ngIf="!dist"> <span class="text-primary">{{dist}} </span>Location Not Found</p>
+      <ul class="p-0 pt-1">
+        <li><i class="me-1" [class]="outside ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'" ></i>Outside Trips</li>
+        <li><i class="me-1" [class]="customise ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'"></i>Customise Trips</li>
+        <!-- <li><i class="me-1" [class]="pets ? 'fa-solid fa-check text-success' : 'fa-sharp fa-solid fa-xmark text-danger'"></i>Pets </li> -->
+
+      </ul>
+      <a href="#" class="btn btn-primary" [routerLink]="[id]">Go somewhere</a>
+    </div>
+  </div>

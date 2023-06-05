@@ -1,0 +1,70 @@
+<body>
+
+    <section class="py-3 my-3 card--section">
+      <div class="container">
+        <div class="row">
+          <div class=" col-md-4 col gap-md-2 d-flex flex-column card--section__container mb-3" *ngFor="let card of allData?.data">
+       <app-activity-card
+       
+       [name]="card.name"
+       [night]="card.night"
+       [office]="card.office?.name"
+       [description]="card.description"
+       [photos]="card.photos[0]?.path"
+       [id]="card._id"
+       ></app-activity-card>
+          </div>
+          <!-- <div class="col-4   show" *ngIf="show">hhh+</div> -->
+        </div>
+      </div>
+    </section>
+  
+    <!-- <button (click)="show = !show">show</button> -->
+    <section class="pagination--section">
+      <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+          <li
+            class="page-item"
+            [ngClass]="{ disabled: 1 === +allData?.currentPage }"
+          >
+            <button
+              [disabled]="1 === +allData?.currentPage"
+              class="page-link"
+              (click)="getAllActivities(+allData?.currentPage - 1)"
+            >
+              Previous
+            </button>
+          </li>
+          <li
+            class="page-item"
+            *ngFor="let page of allData?.pages"
+            (click)="getAllActivities(page)"
+          >
+            <a
+              class="page-link"
+              [ngClass]="{ active: page === +allData?.currentPage }"
+              >{{ page }}</a
+            >
+          </li>
+  
+          <li
+            class="page-item"
+            [ngClass]="{
+              disabled: allData?.pages.length === +allData?.currentPage
+            }"
+          >
+            <button
+              [disabled]="allData?.pages.length === +allData?.currentPage"
+              class="page-link"
+              (click)="getAllActivities(+allData?.currentPage + 1)"
+            >
+              Next
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  
+    <!-- <button (click)="show = !show">show</button> -->
+  </body>
+  
