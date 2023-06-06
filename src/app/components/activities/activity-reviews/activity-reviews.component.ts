@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { AddReviewComponent } from '../add-review/add-review.component';
-import { TransportsService } from '../../transports.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ActivitiesService } from '../activities.service';
+import { AddReviewComponent } from '../add-review/add-review.component';
 
 @Component({
-  selector: 'app-driver-reviews',
-  templateUrl: './driver-reviews.component.html',
-  styleUrls: ['./driver-reviews.component.scss']
+  selector: 'app-activity-reviews',
+  templateUrl: './activity-reviews.component.html',
+  styleUrls: ['./activity-reviews.component.scss']
 })
-export class DriverReviewsComponent {
+export class ActivityReviewsComponent {
   reviews:any;
   id:any;
-  constructor(private service:TransportsService,private router:Router,private active:ActivatedRoute , private dialog : MatDialog){
+  constructor(private service:ActivitiesService,private router:Router,private active:ActivatedRoute , private dialog : MatDialog){
     this.id=this.active.snapshot.paramMap.get("id");
     }
 
@@ -22,7 +22,7 @@ export class DriverReviewsComponent {
 
 
     activityReviews(id: any , page:any = 1) {
-      this.service.driverReviews(id , page).subscribe((res: any) => {
+      this.service.activityReviews(id , page).subscribe((res: any) => {
         this.reviews = res
         console.log(this.reviews , "dkaoji");
         
@@ -34,7 +34,7 @@ export class DriverReviewsComponent {
     addReview() {
       let dialogRef = this.dialog.open(AddReviewComponent, {
         data: {
-          driver : this.id
+          activity : this.id
         },
         height: "450px",
         width: "600px",

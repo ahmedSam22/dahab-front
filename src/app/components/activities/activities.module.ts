@@ -15,6 +15,7 @@ import { ActivityDetailsComponent } from './activity-details/activity-details.co
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ActivitiesPageComponent } from './activities-page/activities-page.component';
 import { ActivityCardComponent } from './activity-card/activity-card.component';
+import { ActivityReviewsComponent } from './activity-reviews/activity-reviews.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ ActivitiesLayoutComponent,
 ActivityDetailsComponent,
 ReviewsComponent,
 ActivitiesPageComponent,
-ActivityCardComponent ],
+ActivityCardComponent,
+ActivityReviewsComponent ],
   imports: [
     CommonModule,
     ActivitiesRoutingModule,

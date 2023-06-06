@@ -97,6 +97,66 @@
     </div>
   </section>
 
+  <section class="py-4">
+    <div class="container">
+      <div class="reviews-section">
+        <div class="d-flex justify-content-between">
+          <h3 class="text-primary">Review</h3>
+          <button class="btn btn-link" [routerLink]="['/offices/activityreviews' , id]">
+            show All
+          </button>
+        </div>
+  
+        <div class="d-flex flex-column review--section">
+          <owl-carousel-o [options]="customOptions" style="display: flex;gap: 60px;">
+            <ng-template
+           
+            carouselSlide
+              *ngFor="let review of reviews"
+            >
+            <div class="review--card">
+                  <div class="d-flex justify-content-between">
+                <h3 class="review--card__name">{{ review.author.name }}</h3>
+                <span>
+                  <i class="fa-solid fa-star" style="color: #d5ac15"></i>
+                  {{ review.rate }}
+                </span>
+              </div>
+              <div>
+                <p>{{ review.text }}</p>
+              </div>
+            </div>
+          
+              </ng-template
+            >
+          </owl-carousel-o>
+  
+          <!-- <div class="review--card" *ngFor="let review of reviews">
+            <div class="d-flex justify-content-between">
+              <h3 class="review--card__name">{{review.author.name}}</h3>
+              <span>
+                <i class="fa-solid fa-star" style="color: #d5ac15;"></i>
+                {{review.rate}}
+              </span>
+            </div>
+            <div>
+              <p>{{review.text}}</p>
+            </div>
+          </div> -->
+  
+          <button
+            class="btn btn-outline-primary w-fit-content align-self-end"
+            (click)="addReview()"
+          >
+            Add Review
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
   <section class="py-4" *ngIf="activity?.price">
     <div class="container">
       <h4 class="text-primary">Price</h4>

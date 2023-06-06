@@ -1,1 +1,38 @@
-<p>add-review works!</p>
+<body>
+    <section class="p-4">
+      <div class="container">
+        <div class="rating">
+          <ul>
+            <li *ngFor="let rate of emoji" (click)="testValue(rate.value)">
+              <img
+                [src]="rate.src"
+                [alt]="rate.alt"
+                srcset=""
+                class="rating-emoji"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  
+    <section class="p-4">
+      <div class="container">
+          <div class="comment">
+              <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" [(ngModel)]="comment"></textarea>
+                  <label for="floatingTextarea2">Add Your Comment Here</label>
+                </div>
+          </div>
+      </div>
+    </section>
+  
+    <section class="p-4">
+      <div class="container">
+          <div class="submit">
+              <button class="btn btn-outline-primary" (click)="addReview()">Add Your Review</button>
+          </div>
+      </div>
+    </section>
+  </body>
+  

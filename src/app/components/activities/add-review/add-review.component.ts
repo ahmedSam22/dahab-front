@@ -12,7 +12,7 @@ export class AddReviewComponent {
 
 
   constructor(private dialog:MatDialogRef<AddReviewComponent>,@Inject(MAT_DIALOG_DATA) public data:any, private service:ActivitiesService){
-    console.log(data.office);
+    console.log(data , "dasijuh");
     
   }
   emoji:any= [
@@ -25,7 +25,7 @@ export class AddReviewComponent {
 rate:any;
 comment:string = ""
 
-testValue(e:any){
+setValue(e:any){
   this.rate = e
   const emojis =  Array.from(document.getElementsByClassName("rating-emoji"));
   emojis.forEach((e:any) => e.classList.remove("selected"))
@@ -35,10 +35,10 @@ testValue(e:any){
 
 addReview(){
   var query:any = new Object();
-  query.office = this.data.office
+  query.activity = this.data.activity
   query.rate = this.rate
   query.text = this.comment
-  return this.service.addReview(query).subscribe(async (res:any)=>{
+  return this.service.addActivityReview(query).subscribe(async (res:any)=>{
     console.log(res.dialog);
     
     if(await res.status == 200) this.dialog.close()
