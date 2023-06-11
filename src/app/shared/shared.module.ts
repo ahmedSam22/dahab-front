@@ -30,7 +30,7 @@ import { ViewImageComponent } from '../components/activities/view-image/view-ima
   exports: [
     NavBarComponent,
     GalleryComponent,
-    ShowMapComponent
+    ShowMapComponent,
   ]
 })
 export class SharedModule { }

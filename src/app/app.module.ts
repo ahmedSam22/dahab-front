@@ -9,6 +9,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 // import { MapComponent } from './shared/map/map.component';
 
@@ -25,6 +26,7 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
+    NgxSpinnerModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
