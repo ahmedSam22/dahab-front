@@ -17,3 +17,21 @@ ng-template{
         margin: auto !important; 
     }
 }
+
+
+@media (max-width: 768px)  {
+    .details{
+        display: none;
+    }
+
+  }
+
+  .review--section{
+    .review--card{
+      background-color: #000000 !important;
+      margin-right: 10px;
+      padding: 20px;
+      border-radius: 8px;
+
+    }
+  }

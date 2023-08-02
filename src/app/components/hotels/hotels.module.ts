@@ -22,6 +22,7 @@ import { HotelsLayoutComponent } from './hotels-layout/hotels-layout.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { AddReviewComponent } from './add-review/add-review.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     MatChipsModule,
     MatSliderModule,
     MatDialogModule,
-    CarouselModule
+    CarouselModule,
+    InfiniteScrollModule
 
   ]
 })

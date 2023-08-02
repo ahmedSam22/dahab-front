@@ -33,7 +33,7 @@
             </mat-slider>
           </div>
           <div class="col">
-            <button class="btn btn-outline-primary" (click)="getAllHotels(1)"> Filter</button>
+            <button class="btn btn-outline-primary" (click)="filterHotels(1)"> Filter</button>
           </div>
         </div>
       </div>
@@ -43,9 +43,14 @@
   <section class="py-3 my-3 card--section">
     <div class="container">
       <div class="row">
-        <div class="col gap-2 d-flex flex-column card--section__container">
+        <div class="col gap-2 d-flex flex-column card--section__container"
+              class="search-results"
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()">
           <app-hotel-card
-            *ngFor="let card of allData?.data"
+            *ngFor="let card of allData"
             [name]="card.name"
             [dist]="card.distance"
             [breakfast]="card.breakfast"
@@ -65,7 +70,7 @@
   </section>
 
   <!-- <button (click)="show = !show">show</button> -->
-  <section class="pagination--section">
+  <!-- <section class="pagination--section">
     <nav aria-label="...">
       <ul class="pagination justify-content-center">
         <li
@@ -108,7 +113,7 @@
         </li>
       </ul>
     </nav>
-  </section>
+  </section> -->
 
   <!-- <button (click)="show = !show">show</button> -->
 </body>

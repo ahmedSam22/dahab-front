@@ -25,7 +25,7 @@ export class ShowMapComponent {
       container: 'map',
       style: this.style,
       zoom: 15,
-      center: [ this.outlat,this.outlng]
+      center: [this.outlng,this.outlat]
     });
     // Add map controls
     this.map.addControl(new mapboxgl.NavigationControl());

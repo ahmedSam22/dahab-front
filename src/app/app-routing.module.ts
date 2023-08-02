@@ -13,41 +13,18 @@ import { TransportsLayoutComponent } from './components/transports/transports-la
 const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./components/auth/auth.module').then(m => m.AuthModule)},
 
-  // {path : 'home' ,component :HomeComponent, children:[
-  //   { path: '', loadChildren: () => import('./components/layout/layout.module').then(m => m.LayoutModule) },
+ 
+  // { path: 'home', loadChildren: () => import('./components/layout/layout.module').then(m => m.LayoutModule) },
 
-  // ]},
-
-  {path : 'home' ,component :HomeComponent,canActivate:[AuthGuard], children:[
-    { path: '', loadChildren: () => import('./components/layout/layout.module').then(m => m.LayoutModule) },
-
-  ]},
-
-  // {path : '' ,component :LandingPageComponent, children:[
-  //   { path: '', loadChildren: () => import('./components/landing-page/landing-page.module').then(m => m.LandingPageModule) },
-
-  // ]},
-
-  {path : '' ,component :LandingPageComponent,canActivate:[AuthGuard], children:[
-    { path: '', loadChildren: () => import('./components/landing-page/landing-page.module').then(m => m.LandingPageModule) },
-    
-  ]},
+  
+  { path: 'home', loadChildren: () => import('./components/landing-page/landing-page.module').then(m => m.LandingPageModule) },
 
 
-  {path : 'hotels' ,component :HotelsLayoutComponent,canActivate:[AuthGuard], children:[
-    { path: '', loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
-    
-  ]},
+  { path: 'hotels', loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
 
-  {path : 'offices' ,component :ActivitiesLayoutComponent,canActivate:[AuthGuard], children:[
-    { path: '', loadChildren: () => import('./components/activities/activities.module').then(m => m.ActivitiesModule) },
-    
-  ]},
+  { path: 'offices', loadChildren: () => import('./components/activities/activities.module').then(m => m.ActivitiesModule) },
 
-  {path : 'transports' ,component :TransportsLayoutComponent,canActivate:[AuthGuard], children:[
-    { path: '', loadChildren: () => import('./components/transports/transports.module').then(m => m.TransportsModule) },
-    
-  ]},
+  { path: 'transports', loadChildren: () => import('./components/transports/transports.module').then(m => m.TransportsModule) }
 
   // {path : 'hotels' ,canActivate:[AuthGuard], loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
 

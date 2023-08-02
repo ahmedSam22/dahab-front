@@ -6,7 +6,7 @@ export const environment = {
     baseURL : "http://localhost:5000",
     currentUserKey: "userData",
     mapbox: {
-        accessToken: 'pk.eyJ1IjoiZGFoYWJhcHAiLCJhIjoiY2xmdjg1bTU3MDI2cTNkcWxwM3VqeG5wbSJ9.pEOQmg-n5yvMGfsFnR_omQ'
+        accessToken: 'pk.eyJ1IjoiZGFoYWJhcHAiLCJhIjoiY2xpaXh3YTdtMDJ1cDNnczV5d3pqOGN0MiJ9.nZynmrSuubWjtGHkY88HyQ'
       },
 
       googleMap:{

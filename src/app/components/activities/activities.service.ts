@@ -43,4 +43,14 @@ allActivities(page:any){
 }
 
 
+
+activityReviews(id:any,page:any){
+  return this.http.get(`${environment.baseURL}/activitiesreviews/getactivity?activity=${id}&page=${page}`)
+}
+
+addActivityReview(body:any){
+  return this.http.post(`${environment.baseURL}/activitiesreviews/add` , body)
+}
+
+
 }

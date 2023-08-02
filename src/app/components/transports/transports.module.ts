@@ -11,6 +11,7 @@ import { DriverReviewsComponent } from './driver-reviews/driver-reviews.componen
 import { AddReviewComponent } from './add-review/add-review.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     SharedModule,
     CarouselModule,
     MatDialogModule,
+    FormsModule
 
   ]
 })

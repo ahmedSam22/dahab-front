@@ -5,11 +5,13 @@ import { OfficeDetailsComponent } from './office-details/office-details.componen
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ActivitiesPageComponent } from './activities-page/activities-page.component';
 import { ActivityDetailsComponent } from './activity-details/activity-details.component';
+import { ActivityReviewsComponent } from './activity-reviews/activity-reviews.component';
 
 const routes: Routes = [
   {path : "" , component : OfficesComponent},
   { path:"activities" , component:ActivitiesPageComponent},
   { path:"activities/:id" , component:ActivityDetailsComponent},
+  { path:"activityreviews/:id" , component:ActivityReviewsComponent},
   { path:"rates/:id" , component:ReviewsComponent},
   { path:":id" , component:OfficeDetailsComponent},
 ];
