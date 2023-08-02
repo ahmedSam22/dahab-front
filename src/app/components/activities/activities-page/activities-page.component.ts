@@ -16,12 +16,13 @@ export class ActivitiesPageComponent {
   }
   
   getAllActivities(page:number){
-    // this.spinner.show().then(_=>{
-    //   console.log('kjihu')
+    this.spinner.show().then(_=>{
+      console.log('kjihu')
       
-    // })
+    })
    this.service.allActivities(page).subscribe((res:any)=>{this.allData = res ;console.log(this.allData);
     console.log(this.allData , "favourites");
+    this.spinner.hide()
     }
     )
   }
