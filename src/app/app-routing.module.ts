@@ -17,16 +17,16 @@ const routes: Routes = [
   // { path: 'home', loadChildren: () => import('./components/layout/layout.module').then(m => m.LayoutModule) },
 
   
-  { path: 'home', loadChildren: () => import('./components/landing-page/landing-page.module').then(m => m.LandingPageModule) },
+  { path: '', loadChildren: () => import('./components/landing-page/landing-page.module').then(m => m.LandingPageModule) },
 
 
-  { path: 'hotels', loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
+  // { path: 'hotels', loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
 
   { path: 'offices', loadChildren: () => import('./components/activities/activities.module').then(m => m.ActivitiesModule) },
 
-  { path: 'transports', loadChildren: () => import('./components/transports/transports.module').then(m => m.TransportsModule) }
+  { path: 'transports', loadChildren: () => import('./components/transports/transports.module').then(m => m.TransportsModule) },
 
-  // {path : 'hotels' ,canActivate:[AuthGuard], loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
+  {path : 'hotels' ,canActivate:[AuthGuard], loadChildren: () => import('./components/hotels/hotels.module').then(m => m.HotelsModule) },
 
 
 

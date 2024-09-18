@@ -14,7 +14,7 @@ export class AuthGuard implements CanActivate, CanDeactivate<unknown> {
       if(localStorage.getItem(`${environment.currentUserKey}`)){
         return true
       }else{
-        // this.router.navigate(['/auth/login']);
+        this.router.navigate(['/auth/login']);
         return false
 
       }
