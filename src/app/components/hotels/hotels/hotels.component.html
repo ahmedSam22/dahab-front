@@ -27,9 +27,9 @@
               <!-- to <span class="text-primary"> {{toPrice.value}}</span>  -->
             </span>
             {{start.value}} , {{end.value}}
-            <mat-slider min="0" max="8000" >
-              <input   matSliderStartThumb #start (mouseup)="this.startPrice = start.value" />
-              <input   matSliderEndThumb #end  (mouseup)="this.endPrice = end.value" />
+            <mat-slider min="0" max="8000">
+              <input matSliderStartThumb #start (mouseup)="this.startPrice = start.value" />
+              <input matSliderEndThumb #end (mouseup)="this.endPrice = end.value" />
             </mat-slider>
           </div>
           <div class="col">
@@ -43,26 +43,11 @@
   <section class="py-3 my-3 card--section">
     <div class="container">
       <div class="row">
-        <div class="col gap-2 d-flex flex-column card--section__container"
-              class="search-results"
-      infiniteScroll
-      [infiniteScrollDistance]="2"
-      [infiniteScrollThrottle]="50"
-      (scrolled)="onScroll()">
-          <app-hotel-card
-            *ngFor="let card of allData"
-            [name]="card.name"
-            [dist]="card.distance"
-            [breakfast]="card.breakfast"
-            [pets]="card.pets"
-            [wifi]="card.wifi"
-            [type]="card.type"
-            [price]="card.price"
-            [id]="card._id"
-            [lat]="card.location.lat"
-            [lng]="card.location.lng"
-            [favs]="favs"
-          ></app-hotel-card>
+        <div class="col gap-3 d-flex flex-column card--section__container search-results"  infiniteScroll
+          [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+          <app-hotel-card *ngFor="let card of allData" [name]="card.name" [dist]="card.distance"
+            [breakfast]="card.breakfast" [pets]="card.pets" [wifi]="card.wifi" [type]="card.type" [price]="card.price"
+            [id]="card._id" [lat]="card.location.lat" [lng]="card.location.lng" [favs]="favs"></app-hotel-card>
         </div>
         <!-- <div class="col-4   show" *ngIf="show">hhh+</div> -->
       </div>
