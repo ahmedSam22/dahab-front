@@ -31,7 +31,9 @@
     "ngx-infinite-scroll": "^13.0.0",
     "ngx-owl-carousel-o": "^7.0.1",
     "ngx-spinner": "^15.0.0",
+    "ngx-toastr": "^16.2.0",
     "rxjs": "~7.5.0",
+    "sweetalert2": "^11.14.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
