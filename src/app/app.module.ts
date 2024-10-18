@@ -12,7 +12,6 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { SharedModule } from "./shared/shared.module";
 import { ErrorHandlingInterceptor } from './interceptor/error-handling.interceptor';
-import { ToastrModule } from 'ngx-toastr';
 
 // import { MapComponent } from './shared/map/map.component';
 
@@ -38,7 +37,6 @@ import { ToastrModule } from 'ngx-toastr';
         registrationStrategy: 'registerWhenStable:30000'
     }),
     SharedModule,
-    ToastrModule.forRoot()
 ],
   providers: [AuthGuard ,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
